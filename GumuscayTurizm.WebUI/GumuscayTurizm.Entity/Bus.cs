@@ -11,5 +11,6 @@ namespace GumuscayTurizm.Entity
         public int BusId { get; set; }
         public string Name { get; set; }
         public int SeatingCapacity { get; set; }
+        public List<Ticket> Tickets { get; set; }
     }
 }

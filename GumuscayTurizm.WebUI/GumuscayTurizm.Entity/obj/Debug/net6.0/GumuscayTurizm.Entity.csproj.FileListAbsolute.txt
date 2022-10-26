@@ -1,0 +1,12 @@
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\bin\Debug\net6.0\GumuscayTurizm.Entity.deps.json
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\bin\Debug\net6.0\GumuscayTurizm.Entity.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\bin\Debug\net6.0\GumuscayTurizm.Entity.pdb
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.csproj.AssemblyReference.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.AssemblyInfoInputs.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.AssemblyInfo.cs
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\refint\GumuscayTurizm.Entity.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\GumuscayTurizm.Entity.pdb
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Entity\obj\Debug\net6.0\ref\GumuscayTurizm.Entity.dll

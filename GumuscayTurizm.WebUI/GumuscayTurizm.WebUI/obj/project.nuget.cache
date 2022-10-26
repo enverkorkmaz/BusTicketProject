@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "LQUio23PILDmotzD5z94xhFzB7tkMUFzRPWmkzVC+wiRkISU3AVRz4pNEQnPUNd4R/uLVdO2h2Fy/k4DiskpOw==",
+  "dgSpecHash": "7LuuuDNMzUHnJ+442LY23WXIr2L0KYTtF0iRlLhQeO5P32Kg6cdeo2mwBGixr1EcriW4suZ+EFHNRHstrvZhIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
+  "projectFilePath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ÖĞLE\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.10\\microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512",
+    "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.10\\microsoft.entityframeworkcore.design.6.0.10.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.10\\microsoft.entityframeworkcore.relational.6.0.10.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\6.0.10\\microsoft.entityframeworkcore.sqlite.6.0.10.nupkg.sha512",
     "C:\\Users\\ÖĞLE\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\6.0.10\\microsoft.entityframeworkcore.sqlite.core.6.0.10.nupkg.sha512",

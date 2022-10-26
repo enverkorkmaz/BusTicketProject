@@ -13,5 +13,6 @@ namespace GumuscayTurizm.Entity
         public string Time { get; set; }
         public int RouteId { get; set; }
         public Route Route { get; set; }
+        public List<Ticket> Tickets { get; set; }
     }
 }

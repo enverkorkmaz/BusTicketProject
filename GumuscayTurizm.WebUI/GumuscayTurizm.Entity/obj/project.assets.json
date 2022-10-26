@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
       "projectName": "GumuscayTurizm.Entity",
-      "projectPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
+      "projectPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
       "packagesPath": "C:\\Users\\ÖĞLE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\obj\\",
+      "outputPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ÖĞLE\\AppData\\Roaming\\NuGet\\NuGet.Config",

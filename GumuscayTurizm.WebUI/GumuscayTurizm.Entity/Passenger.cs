@@ -14,6 +14,7 @@ namespace GumuscayTurizm.Entity
         public string Gender { get; set; }
         public string IdentificationNumber { get; set; }
         public string Email { get; set; }
+        public List<Ticket> Tickets { get; set; }
 
     }
 }

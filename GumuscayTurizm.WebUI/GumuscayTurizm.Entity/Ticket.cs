@@ -11,10 +11,11 @@ namespace GumuscayTurizm.Entity
         public int TicketId { get; set; }
         public int PassengerId { get; set; }
         public Passenger Passenger { get; set; }
-        public int RouteId { get; set; }
-        public Route Route { get; set; }
+       
         public int TripId { get; set; }
         public Trip Trip { get; set; }
         public int SeatNumber { get; set; }
+        public int BusId { get; set; }
+        public Bus Bus { get; set; }
     }
 }

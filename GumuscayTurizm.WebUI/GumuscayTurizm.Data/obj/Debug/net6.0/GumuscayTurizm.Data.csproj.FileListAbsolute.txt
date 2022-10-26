@@ -1,0 +1,17 @@
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.csproj.AssemblyReference.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.AssemblyInfoInputs.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.AssemblyInfo.cs
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.csproj.CoreCompileInputs.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\bin\Debug\net6.0\GumuscayTurizm.Data.deps.json
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\bin\Debug\net6.0\GumuscayTurizm.Data.runtimeconfig.json
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\bin\Debug\net6.0\GumuscayTurizm.Data.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\bin\Debug\net6.0\GumuscayTurizm.Data.pdb
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\bin\Debug\net6.0\GumuscayTurizm.Entity.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\bin\Debug\net6.0\GumuscayTurizm.Entity.pdb
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.csproj.CopyComplete
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\refint\GumuscayTurizm.Data.dll
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.pdb
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\GumuscayTurizm.Data.genruntimeconfig.cache
+C:\Users\ÖĞLE\Desktop\enverproje\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.Data\obj\Debug\net6.0\ref\GumuscayTurizm.Data.dll
