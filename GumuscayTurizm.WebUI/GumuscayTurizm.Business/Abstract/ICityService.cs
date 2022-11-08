@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GumuscayTurizm.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,10 @@ namespace GumuscayTurizm.Business.Abstract
 {
     public interface ICityService
     {
-        string GetCityByName(string cityName);
-        int GetCityById(int id);
-        void Create();
-        void Update();
-        void Delete();
+        Task<City> GetByIdAsync(int id);
+        Task<List<City>> GetAllAsync();
+        Task CreateAsync(City city);
+        void Update(City city);
+        void Delete(City city);
     }
 }
