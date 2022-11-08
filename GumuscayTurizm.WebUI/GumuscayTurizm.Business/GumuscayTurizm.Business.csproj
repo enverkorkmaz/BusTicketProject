@@ -10,4 +10,8 @@
     <ProjectReference Include="..\GumuscayTurizm.Data\GumuscayTurizm.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+  </ItemGroup>
+
 </Project>

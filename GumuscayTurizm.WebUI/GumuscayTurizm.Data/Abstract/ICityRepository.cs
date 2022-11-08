@@ -9,6 +9,11 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface ICityRepository : IRepository<City>
     {
-        
+        string GetCityByName(string cityName);
+        int GetCityById(int id);
+        void Create();
+        void Update();
+        void Delete();
+
     }
 }
