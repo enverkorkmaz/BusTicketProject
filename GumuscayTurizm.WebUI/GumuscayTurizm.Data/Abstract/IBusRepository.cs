@@ -9,7 +9,6 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface IBusRepository : IRepository<Bus>
     {
-        int SeatCapacity();
-        string BusName();
+        
     }
 }
