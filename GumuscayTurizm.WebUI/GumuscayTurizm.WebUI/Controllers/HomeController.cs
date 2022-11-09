@@ -22,9 +22,14 @@ namespace GumuscayTurizm.WebUI.Controllers
             _tripService = tripService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var result  = await _cityService.GetAllAsync();
+            HomePageModel homePageModel = new HomePageModel()
+            {
+                Cities = result
+            };
+            return View(homePageModel);
         }
 
        

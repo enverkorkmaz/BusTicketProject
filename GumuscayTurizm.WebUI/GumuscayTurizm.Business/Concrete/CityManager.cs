@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace GumuscayTurizm.Business.Concrete
 {
     public class CityManager : ICityService
     {
+        private ICityRepository _cityRepository;
+
+        public CityManager(ICityRepository cityRepository)
+        {
+            _cityRepository = cityRepository;
+        }
+
         public Task CreateAsync(City city)
         {
             throw new NotImplementedException();
@@ -20,9 +28,9 @@ namespace GumuscayTurizm.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<List<City>> GetAllAsync()
+        public async Task<List<City>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _cityRepository.GetAllAsync();
         }
 
         public Task<City> GetByIdAsync(int id)

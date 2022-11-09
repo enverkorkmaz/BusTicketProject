@@ -1,5 +1,6 @@
 ﻿using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,21 @@ using System.Threading.Tasks;
 
 namespace GumuscayTurizm.Data.Concrete
 {
-    public class EfCoreCityRepository : ICityRepository
+    public class EfCoreCityRepository : EfCoreGenericRepository<City>, ICityRepository
     {
+        public EfCoreCityRepository(GTContext _dbContext) : base(_dbContext)
+            
+        {
+
+        }
+        private GTContext context
+        {
+            get
+            {
+                return context as GTContext;
+            }
+        }
+
         public void Create()
         {
             throw new NotImplementedException();
@@ -20,9 +34,12 @@ namespace GumuscayTurizm.Data.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<List<City>> GetAllAsync()
+        public async Task<List<City>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await context
+                .Set<City>()
+                .ToListAsync();
+                
         }
 
         public Task<City> GetByIdAsync(int id)

@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Data.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,19 @@ namespace GumuscayTurizm.Data.Concrete
 {
     public class EfCoreGenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
+        protected readonly DbContext _dbContext;
+        public EfCoreGenericRepository(GTContext dBContext)
+        {
+            _dbContext = dBContext;
+        }
+        protected GTContext context
+        {
+            get
+            {
+                return _dbContext as GTContext;
+            }
+        }
+
         public void Create()
         {
             throw new NotImplementedException();
@@ -19,9 +33,11 @@ namespace GumuscayTurizm.Data.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<List<TEntity>> GetAllAsync()
+        public async Task<List<TEntity>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _dbContext
+                .Set<TEntity>()
+                .ToListAsync();
         }
 
         public Task<TEntity> GetByIdAsync(int id)
