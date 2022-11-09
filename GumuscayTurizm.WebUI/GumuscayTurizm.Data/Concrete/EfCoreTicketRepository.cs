@@ -8,8 +8,20 @@ using System.Threading.Tasks;
 
 namespace GumuscayTurizm.Data.Concrete
 {
-    public class EfCoreTicketRepository : ITicketRepository
+    public class EfCoreTicketRepository : EfCoreGenericRepository<Ticket>,ITicketRepository
     {
+        public EfCoreTicketRepository(GTContext _dbContext) : base(_dbContext)
+
+        {
+
+        }
+        private GTContext context
+        {
+            get
+            {
+                return context as GTContext;
+            }
+        }
         public void Create()
         {
             throw new NotImplementedException();
