@@ -9,7 +9,7 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface ITripRepository : IRepository<Trip>
     {
-        Trip GetTripById(int id);
+        Task<List<Trip>> GetTripById(int id);
 
     }
 }

@@ -57,12 +57,12 @@ namespace GumuscayTurizm.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("RouteId")
+                    b.Property<int?>("TripId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("CityId");
 
-                    b.HasIndex("RouteId");
+                    b.HasIndex("TripId");
 
                     b.ToTable("Cities");
 
@@ -146,45 +146,6 @@ namespace GumuscayTurizm.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("GumuscayTurizm.Entity.Route", b =>
-                {
-                    b.Property<int>("RouteId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("FromWhereId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("ParentRouteId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("ToWhereId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("RouteId");
-
-                    b.ToTable("Routes");
-
-                    b.HasData(
-                        new
-                        {
-                            RouteId = 1,
-                            FromWhereId = 1,
-                            Price = 250m,
-                            ToWhereId = 6
-                        },
-                        new
-                        {
-                            RouteId = 2,
-                            FromWhereId = 1,
-                            Price = 150m,
-                            ToWhereId = 5
-                        });
-                });
-
             modelBuilder.Entity("GumuscayTurizm.Entity.Ticket", b =>
                 {
                     b.Property<int>("TicketId")
@@ -230,18 +191,27 @@ namespace GumuscayTurizm.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Date")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("RouteId")
+                    b.Property<int>("BusId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Time")
+                    b.Property<DateTime>("Date")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("FromWhereId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ToWhereId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("TripId");
 
-                    b.HasIndex("RouteId");
+                    b.HasIndex("BusId");
 
                     b.ToTable("Trips");
 
@@ -249,24 +219,30 @@ namespace GumuscayTurizm.Data.Migrations
                         new
                         {
                             TripId = 1,
-                            Date = "25.12.2022",
-                            RouteId = 1,
-                            Time = "00:00"
+                            BusId = 2,
+                            Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromWhereId = 1,
+                            Price = 150m,
+                            Time = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ToWhereId = 5
                         },
                         new
                         {
                             TripId = 2,
-                            Date = "25.12.2022",
-                            RouteId = 1,
-                            Time = "04:00"
+                            BusId = 1,
+                            Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromWhereId = 1,
+                            Price = 100m,
+                            Time = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ToWhereId = 2
                         });
                 });
 
             modelBuilder.Entity("GumuscayTurizm.Entity.City", b =>
                 {
-                    b.HasOne("GumuscayTurizm.Entity.Route", null)
+                    b.HasOne("GumuscayTurizm.Entity.Trip", null)
                         .WithMany("Cities")
-                        .HasForeignKey("RouteId");
+                        .HasForeignKey("TripId");
                 });
 
             modelBuilder.Entity("GumuscayTurizm.Entity.Ticket", b =>
@@ -298,13 +274,13 @@ namespace GumuscayTurizm.Data.Migrations
 
             modelBuilder.Entity("GumuscayTurizm.Entity.Trip", b =>
                 {
-                    b.HasOne("GumuscayTurizm.Entity.Route", "Route")
-                        .WithMany("Trips")
-                        .HasForeignKey("RouteId")
+                    b.HasOne("GumuscayTurizm.Entity.Bus", "Bus")
+                        .WithMany()
+                        .HasForeignKey("BusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Route");
+                    b.Navigation("Bus");
                 });
 
             modelBuilder.Entity("GumuscayTurizm.Entity.Bus", b =>
@@ -317,15 +293,10 @@ namespace GumuscayTurizm.Data.Migrations
                     b.Navigation("Tickets");
                 });
 
-            modelBuilder.Entity("GumuscayTurizm.Entity.Route", b =>
+            modelBuilder.Entity("GumuscayTurizm.Entity.Trip", b =>
                 {
                     b.Navigation("Cities");
 
-                    b.Navigation("Trips");
-                });
-
-            modelBuilder.Entity("GumuscayTurizm.Entity.Trip", b =>
-                {
                     b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618

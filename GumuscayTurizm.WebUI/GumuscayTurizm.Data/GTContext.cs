@@ -17,7 +17,6 @@ namespace GumuscayTurizm.Data
         public DbSet<City> Cities { get; set; }
         public DbSet<Bus> Busses { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
-        public DbSet<Route> Routes { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Trip> Trips { get; set; }
 
@@ -46,18 +45,13 @@ namespace GumuscayTurizm.Data
             modelBuilder
                 .Entity<Trip>()
                 .HasData(
-                new Trip() { TripId = 1, Time = "00:00", Date = "25.12.2022", RouteId = 1 },
-                new Trip() { TripId = 2, Time = "04:00", Date = "25.12.2022", RouteId = 1 }
+                new Trip() { TripId = 1, Date = new DateTime(2022,12,25),FromWhereId=1,ToWhereId=5,Price=150,BusId=2},
+                new Trip() { TripId = 2, Date = new DateTime(2022, 12, 25), FromWhereId = 1, ToWhereId = 2, Price=100, BusId=1}
                 );
-            modelBuilder
-                .Entity<Route>()
-                .HasData(
-                new Route() { RouteId = 1, FromWhereId = 1, ToWhereId = 6,ParentRouteId=null, Price = 250 },
-                new Route() { RouteId = 2, FromWhereId = 1, ToWhereId = 5,ParentRouteId=null, Price = 150 }
+            
                 
                 
 
-                );
             modelBuilder
                 .Entity<Passenger>()
                 .HasData(

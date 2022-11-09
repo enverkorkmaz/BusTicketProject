@@ -1,4 +1,4 @@
-﻿using GumuscayTurizm.Business.Abstract;
+﻿using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
 using System;
 using System.Collections.Generic;
@@ -6,31 +6,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GumuscayTurizm.Business.Concrete
+namespace GumuscayTurizm.Data.Concrete
 {
-    public class RouteManager : IRouteService
+    public class EfCoreTripRepository : ITripRepository
     {
-        public Task CreateAsync(Route route)
+        public void Create()
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Route route)
+        public void Delete()
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<Route>> GetAllAsync()
+        public Task<List<Trip>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Route> GetByIdAsync(int id)
+        public Task<Trip> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Route route)
+        public Task<List<Trip>> GetTripById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
         {
             throw new NotImplementedException();
         }

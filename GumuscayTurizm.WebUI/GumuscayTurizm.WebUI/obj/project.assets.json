@@ -1274,24 +1274,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\enver\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ÖĞLE\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
+      "projectUniqueName": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
       "projectName": "GumuscayTurizm.WebUI",
-      "projectPath": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
-      "packagesPath": "C:\\Users\\enver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\obj\\",
+      "projectPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
+      "packagesPath": "C:\\Users\\ÖĞLE\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\enver\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ÖĞLE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1305,8 +1300,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Business\\GumuscayTurizm.Business.csproj": {
-              "projectPath": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Business\\GumuscayTurizm.Business.csproj"
+            "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Business\\GumuscayTurizm.Business.csproj": {
+              "projectPath": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Business\\GumuscayTurizm.Business.csproj"
             }
           }
         }
@@ -1347,7 +1342,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

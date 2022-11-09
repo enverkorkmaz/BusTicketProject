@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -40,19 +41,27 @@ namespace GumuscayTurizm.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Routes",
+                name: "Trips",
                 columns: table => new
                 {
-                    RouteId = table.Column<int>(type: "INTEGER", nullable: false)
+                    TripId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Date = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Time = table.Column<DateTime>(type: "TEXT", nullable: false),
                     FromWhereId = table.Column<int>(type: "INTEGER", nullable: false),
                     ToWhereId = table.Column<int>(type: "INTEGER", nullable: false),
-                    ParentRouteId = table.Column<int>(type: "INTEGER", nullable: true),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false)
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    BusId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Routes", x => x.RouteId);
+                    table.PrimaryKey("PK_Trips", x => x.TripId);
+                    table.ForeignKey(
+                        name: "FK_Trips_Busses_BusId",
+                        column: x => x.BusId,
+                        principalTable: "Busses",
+                        principalColumn: "BusId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,37 +71,16 @@ namespace GumuscayTurizm.Data.Migrations
                     CityId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
-                    RouteId = table.Column<int>(type: "INTEGER", nullable: true)
+                    TripId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Cities", x => x.CityId);
                     table.ForeignKey(
-                        name: "FK_Cities_Routes_RouteId",
-                        column: x => x.RouteId,
-                        principalTable: "Routes",
-                        principalColumn: "RouteId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Trips",
-                columns: table => new
-                {
-                    TripId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Date = table.Column<string>(type: "TEXT", nullable: true),
-                    Time = table.Column<string>(type: "TEXT", nullable: true),
-                    RouteId = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Trips", x => x.TripId);
-                    table.ForeignKey(
-                        name: "FK_Trips_Routes_RouteId",
-                        column: x => x.RouteId,
-                        principalTable: "Routes",
-                        principalColumn: "RouteId",
-                        onDelete: ReferentialAction.Cascade);
+                        name: "FK_Cities_Trips_TripId",
+                        column: x => x.TripId,
+                        principalTable: "Trips",
+                        principalColumn: "TripId");
                 });
 
             migrationBuilder.CreateTable(
@@ -141,42 +129,42 @@ namespace GumuscayTurizm.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 1, "İstanbul", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 2, "Bursa", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 3, "Bandırma", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 4, "Biga", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 5, "Çanakkale", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 6, "İzmir", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 7, "Kocaeli", null });
 
             migrationBuilder.InsertData(
                 table: "Cities",
-                columns: new[] { "CityId", "Name", "RouteId" },
+                columns: new[] { "CityId", "Name", "TripId" },
                 values: new object[] { 8, "Sakarya", null });
 
             migrationBuilder.InsertData(
@@ -185,24 +173,14 @@ namespace GumuscayTurizm.Data.Migrations
                 values: new object[] { 1, "", "", "E", "1", "" });
 
             migrationBuilder.InsertData(
-                table: "Routes",
-                columns: new[] { "RouteId", "FromWhereId", "ParentRouteId", "Price", "ToWhereId" },
-                values: new object[] { 1, 1, null, 250m, 6 });
-
-            migrationBuilder.InsertData(
-                table: "Routes",
-                columns: new[] { "RouteId", "FromWhereId", "ParentRouteId", "Price", "ToWhereId" },
-                values: new object[] { 2, 1, null, 150m, 5 });
+                table: "Trips",
+                columns: new[] { "TripId", "BusId", "Date", "FromWhereId", "Price", "Time", "ToWhereId" },
+                values: new object[] { 1, 2, new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 150m, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 5 });
 
             migrationBuilder.InsertData(
                 table: "Trips",
-                columns: new[] { "TripId", "Date", "RouteId", "Time" },
-                values: new object[] { 1, "25.12.2022", 1, "00:00" });
-
-            migrationBuilder.InsertData(
-                table: "Trips",
-                columns: new[] { "TripId", "Date", "RouteId", "Time" },
-                values: new object[] { 2, "25.12.2022", 1, "04:00" });
+                columns: new[] { "TripId", "BusId", "Date", "FromWhereId", "Price", "Time", "ToWhereId" },
+                values: new object[] { 2, 1, new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 100m, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2 });
 
             migrationBuilder.InsertData(
                 table: "Tickets",
@@ -210,9 +188,9 @@ namespace GumuscayTurizm.Data.Migrations
                 values: new object[] { 1, 1, 1, 1, 1 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cities_RouteId",
+                name: "IX_Cities_TripId",
                 table: "Cities",
-                column: "RouteId");
+                column: "TripId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tickets_BusId",
@@ -230,9 +208,9 @@ namespace GumuscayTurizm.Data.Migrations
                 column: "TripId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Trips_RouteId",
+                name: "IX_Trips_BusId",
                 table: "Trips",
-                column: "RouteId");
+                column: "BusId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -244,16 +222,13 @@ namespace GumuscayTurizm.Data.Migrations
                 name: "Tickets");
 
             migrationBuilder.DropTable(
-                name: "Busses");
-
-            migrationBuilder.DropTable(
                 name: "Passengers");
 
             migrationBuilder.DropTable(
                 name: "Trips");
 
             migrationBuilder.DropTable(
-                name: "Routes");
+                name: "Busses");
         }
     }
 }

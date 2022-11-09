@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GumuscayTurizm.Data.Concrete
 {
-    public class EfCoreBusRepository : IBusRepository
+    public class EfCoreTicketRepository : ITicketRepository
     {
         public void Create()
         {
@@ -20,12 +20,12 @@ namespace GumuscayTurizm.Data.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<List<Bus>> GetAllAsync()
+        public Task<List<Ticket>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Bus> GetByIdAsync(int id)
+        public Task<Ticket> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }

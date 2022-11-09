@@ -1,4 +1,5 @@
-﻿using GumuscayTurizm.WebUI.Models;
+﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,11 +7,19 @@ namespace GumuscayTurizm.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICityService _cityService;
+        private readonly IBusService _busService;
+        private readonly IPassengerService _passengerService;
+        private readonly ITicketService _ticketService;
+        private readonly ITripService _tripService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICityService cityService, IBusService busService, IPassengerService passengerService, ITicketService ticketService, ITripService tripService)
         {
-            _logger = logger;
+            _cityService = cityService;
+            _busService = busService;
+            _passengerService = passengerService;
+            _ticketService = ticketService;
+            _tripService = tripService;
         }
 
         public IActionResult Index()
@@ -18,15 +27,6 @@ namespace GumuscayTurizm.WebUI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+       
     }
 }

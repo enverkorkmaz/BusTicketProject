@@ -9,10 +9,15 @@ namespace GumuscayTurizm.Entity
     public class Trip
     {
         public int TripId { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
-        public int RouteId { get; set; }
-        public Route Route { get; set; }
+        public DateTime Date { get; set; }
+        public DateTime Time { get; set; }
+        
+        public int FromWhereId { get; set; }
+        public int ToWhereId { get; set; }
+        public decimal Price { get; set; }
         public List<Ticket> Tickets { get; set; }
+        public List<City> Cities { get; set; }
+        public Bus Bus { get; set; }
+        public int BusId { get; set; }
     }
 }
