@@ -8,21 +8,21 @@
 <div class="col-md-8 mt-2">
 <div class="card mt-2" style="width: 25rem">
     <div class="card-body" style="width: 25rem">
-        <select class="form-select" @*asp-for="fromWhereId"*@>
+        <select class="form-select" asp-for="fromWhereId">
             <option selected >Kalkış yeri seçiniz</option>
-           @* @foreach(var city in Model.Cities)
+           @foreach(var city in Model.Cities)
             {
                 <option value="@city.CityId">@city.Name</option>
-            }*@
+            }
         </select>
-            <select class="form-select mt-3" @*asp-for="toWhereId"*@>
+            <select class="form-select mt-3" asp-for="toWhereId">
                 <option selected>Varış yeri seçiniz</option>
-                @*@foreach (var city in Model.Cities)
+                @foreach (var city in Model.Cities)
                 {
                     <option value="@city.CityId">@city.Name</option>
-                }*@
+                }
             </select>
-            <input @*asp-for="Date"*@ class="form-control mt-3" type="date"/>
+            <input asp-for="Date" class="form-control mt-3" type="date"/>
     </div>
 </div>
 </div>

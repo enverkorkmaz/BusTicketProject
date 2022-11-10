@@ -11,17 +11,11 @@ namespace GumuscayTurizm.Data.Concrete
     public class EfCoreGenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly DbContext _dbContext;
-        public EfCoreGenericRepository(GTContext dBContext)
+        public EfCoreGenericRepository(DbContext dBContext)
         {
             _dbContext = dBContext;
         }
-        protected GTContext context
-        {
-            get
-            {
-                return _dbContext as GTContext;
-            }
-        }
+        
 
         public void Create()
         {
