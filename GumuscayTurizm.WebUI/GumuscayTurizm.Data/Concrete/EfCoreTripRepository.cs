@@ -1,5 +1,6 @@
 ﻿using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,23 @@ namespace GumuscayTurizm.Data.Concrete
         {
             get
             {
-                return context as GTContext;
+                return _dbContext as GTContext;
             }
         }
 
         public Task<List<Trip>> GetTripById(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<List<Trip>> GetTripsAsync(int fromWhereId, int toWhereId, DateTime Date)
+        {
+            return await context
+                .Trips
+                .Where(t => t.FromWhereId == fromWhereId && t.ToWhereId == toWhereId && t.Date == Date)
+                .Include(t => t.FromWhere)
+                .Include(t => t.ToWhere)
+                .ToListAsync();
         }
     }
 }

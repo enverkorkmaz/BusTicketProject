@@ -31,6 +31,22 @@ namespace GumuscayTurizm.WebUI.Controllers
             };
             return View(homePageModel);
         }
+        public async Task<IActionResult> TripList(HomePageModel homePageModel)
+        {
+            var result = await _tripService.GetTripsAsync(homePageModel.fromWhereId, homePageModel.toWhereId, homePageModel.Date);
+            List<TripListModel> tripsModel = result.Select(t => new TripListModel
+            {
+                toWhereId = t.ToWhereId,
+                fromWhereId = t.FromWhereId,
+                toWhere = t.ToWhere,
+                fromWhere = t.FromWhere,
+                Price = t.Price,
+                Date = t.Date
+
+            }).ToList();
+            return View(tripsModel);
+
+        }
 
        
     }

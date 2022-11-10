@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace GumuscayTurizm.Business.Concrete
 {
     public class TripManager : ITripService
     {
+        private ITripRepository _tripRepository;
+
+        public TripManager(ITripRepository tripRepository)
+        {
+            _tripRepository = tripRepository;
+        }
+
         public Task CreateAsync(Trip trip)
         {
             throw new NotImplementedException();
@@ -28,6 +36,11 @@ namespace GumuscayTurizm.Business.Concrete
         public Task<Trip> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<List<Trip>> GetTripsAsync(int fromWhereId, int toWhereId, DateTime Date)
+        {
+            return await _tripRepository.GetTripsAsync(fromWhereId, toWhereId, Date);        
         }
 
         public void Update(Trip trip)

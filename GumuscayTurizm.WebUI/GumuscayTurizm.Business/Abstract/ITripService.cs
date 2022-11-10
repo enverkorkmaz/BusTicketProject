@@ -14,5 +14,6 @@ namespace GumuscayTurizm.Business.Abstract
         Task CreateAsync(Trip trip);
         void Update(Trip trip);
         void Delete(Trip trip);
+        Task<List<Trip>> GetTripsAsync(int fromWhereId,int toWhereId,DateTime Date);
     }
 }
