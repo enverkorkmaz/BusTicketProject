@@ -1,18 +1,30 @@
 ﻿@model List<TripListModel>
 
-@foreach(var trips in Model)
+@foreach (var trips in Model)
 {
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item" style="50rem">@trips.fromWhere.Name</li>
-                    <li class="list-group-item">@trips.toWhere.Name</li>
-                    <li class="list-group-item">@trips.Price TL</li>
-                </ul>
-                <h1h1>
-                <h1></h1>
-                <h1></h1>
+                <div class="row">
+                    <div class="col-md-2 mt-1 text-center">
+                        <h3>@trips.fromWhere.Name</h3>
+                    </div>
+                    <div class="col-md-2 mt-2 text-center">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <i class="fa-solid fa-bus"></i>
+                        <i class="fa-solid fa-wifi"></i>
+                        <i class="fa-sharp fa-solid fa-cookie-bite"></i>
+                    </div>
+                    <div class="col-md-2 mt-1 text-center">
+                        <h3>@trips.toWhere.Name</h3>
+                    </div>
+                    <div class="col-md-2 mt-1 text-center">
+                        <h3>@trips.Price ₺</h3>
+                    </div>
+                    <div class="col-md-4 mt-1 text-center">
+                        <button class="btn btn-dark" style="width:15rem" type="submit">BİLET AL</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
