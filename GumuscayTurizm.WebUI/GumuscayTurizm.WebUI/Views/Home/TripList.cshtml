@@ -1,5 +1,19 @@
 ﻿@model List<TripListModel>
+
 @foreach(var trips in Model)
 {
-    <h1>@trips.fromWhere.Name</h1>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item" style="50rem">@trips.fromWhere.Name</li>
+                    <li class="list-group-item">@trips.toWhere.Name</li>
+                    <li class="list-group-item">@trips.Price TL</li>
+                </ul>
+                <h1h1>
+                <h1></h1>
+                <h1></h1>
+            </div>
+        </div>
+    </div>
 }
