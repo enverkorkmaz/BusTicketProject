@@ -46,6 +46,7 @@ namespace GumuscayTurizm.Data
                 .Entity<Trip>()
                 .HasData(
                 new Trip() { TripId = 1, Date = new DateTime(2022,12,25), Time="15:00",FromWhereId=1,ToWhereId=5,Price=150,BusId=2},
+                new Trip() { TripId = 3, Date = new DateTime(2022, 12, 25), Time = "18:00", FromWhereId = 1, ToWhereId = 5, Price = 150, BusId = 2 },
                 new Trip() { TripId = 2, Date = new DateTime(2022, 12, 25),Time="15:00", FromWhereId = 1, ToWhereId = 2, Price=100, BusId=1}
                 );
             

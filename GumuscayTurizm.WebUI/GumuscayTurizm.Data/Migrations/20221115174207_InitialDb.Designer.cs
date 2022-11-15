@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GumuscayTurizm.Data.Migrations
 {
     [DbContext(typeof(GTContext))]
-    [Migration("20221114205731_InitialDb")]
+    [Migration("20221115174207_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -225,6 +225,16 @@ namespace GumuscayTurizm.Data.Migrations
                             FromWhereId = 1,
                             Price = 150m,
                             Time = "15:00",
+                            ToWhereId = 5
+                        },
+                        new
+                        {
+                            TripId = 3,
+                            BusId = 2,
+                            Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromWhereId = 1,
+                            Price = 150m,
+                            Time = "18:00",
                             ToWhereId = 5
                         },
                         new

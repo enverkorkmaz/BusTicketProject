@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.Entity;
 using GumuscayTurizm.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -45,9 +46,16 @@ namespace GumuscayTurizm.WebUI.Controllers
                 Time = t.Time
 
             }).ToList();
+           
             return View(tripsModel);
 
         }
+       
+        public async Task<IActionResult> BuyTicket()
+        {
+            return View();
+        }
+        
 
        
     }

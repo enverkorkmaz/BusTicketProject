@@ -227,6 +227,16 @@ namespace GumuscayTurizm.Data.Migrations
                         },
                         new
                         {
+                            TripId = 3,
+                            BusId = 2,
+                            Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromWhereId = 1,
+                            Price = 150m,
+                            Time = "18:00",
+                            ToWhereId = 5
+                        },
+                        new
+                        {
                             TripId = 2,
                             BusId = 1,
                             Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),

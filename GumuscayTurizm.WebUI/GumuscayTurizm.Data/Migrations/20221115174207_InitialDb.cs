@@ -189,6 +189,11 @@ namespace GumuscayTurizm.Data.Migrations
                 values: new object[] { 2, 1, new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 100m, "15:00", 2 });
 
             migrationBuilder.InsertData(
+                table: "Trips",
+                columns: new[] { "TripId", "BusId", "Date", "FromWhereId", "Price", "Time", "ToWhereId" },
+                values: new object[] { 3, 2, new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 150m, "18:00", 5 });
+
+            migrationBuilder.InsertData(
                 table: "Tickets",
                 columns: new[] { "TicketId", "BusId", "PassengerId", "SeatNumber", "TripId" },
                 values: new object[] { 1, 1, 1, 1, 1 });
