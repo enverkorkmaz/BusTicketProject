@@ -11,7 +11,7 @@ namespace GumuscayTurizm.Entity
     {
         public int TripId { get; set; }
         public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
         public int FromWhereId { get; set; }
         [ForeignKey("FromWhereId")]
         public City FromWhere { get; set; }

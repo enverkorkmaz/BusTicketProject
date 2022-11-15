@@ -198,7 +198,7 @@ namespace GumuscayTurizm.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Time")
+                    b.Property<string>("Time")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("ToWhereId")
@@ -222,7 +222,7 @@ namespace GumuscayTurizm.Data.Migrations
                             Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FromWhereId = 1,
                             Price = 150m,
-                            Time = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Time = "15:00",
                             ToWhereId = 5
                         },
                         new
@@ -232,7 +232,7 @@ namespace GumuscayTurizm.Data.Migrations
                             Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FromWhereId = 1,
                             Price = 100m,
-                            Time = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Time = "15:00",
                             ToWhereId = 2
                         });
                 });

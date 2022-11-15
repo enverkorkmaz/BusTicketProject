@@ -7,6 +7,7 @@ namespace GumuscayTurizm.WebUI.Models
         public int fromWhereId { get; set; }
         public int toWhereId { get; set; }
         public DateTime Date { get; set; }
+        public string Time { get; set; }
         public decimal Price { get; set; }
         public City toWhere { get; set; }
         public City fromWhere { get; set; }

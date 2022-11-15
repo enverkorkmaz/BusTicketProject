@@ -41,7 +41,8 @@ namespace GumuscayTurizm.WebUI.Controllers
                 toWhere = t.ToWhere,
                 fromWhere = t.FromWhere,
                 Price = t.Price,
-                Date = t.Date
+                Date = t.Date,
+                Time = t.Time
 
             }).ToList();
             return View(tripsModel);
