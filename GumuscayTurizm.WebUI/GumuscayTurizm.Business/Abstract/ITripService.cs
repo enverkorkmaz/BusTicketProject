@@ -1,6 +1,7 @@
 ﻿using GumuscayTurizm.Entity;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,5 +16,6 @@ namespace GumuscayTurizm.Business.Abstract
         void Update(Trip trip);
         void Delete(Trip trip);
         Task<List<Trip>> GetTripsAsync(int fromWhereId,int toWhereId,DateTime Date);
+        int GetSeatCapacity(int tripId);
     }
 }

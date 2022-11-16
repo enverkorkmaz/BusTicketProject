@@ -38,6 +38,11 @@ namespace GumuscayTurizm.Business.Concrete
             throw new NotImplementedException();
         }
 
+        public int GetSeatCapacity(int tripId)
+        {
+            return _tripRepository.GetSeatCapacity(tripId);
+        }
+
         public async Task<List<Trip>> GetTripsAsync(int fromWhereId, int toWhereId, DateTime Date)
         {
             return await _tripRepository.GetTripsAsync(fromWhereId, toWhereId, Date);        

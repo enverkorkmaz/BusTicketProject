@@ -3,6 +3,7 @@ using GumuscayTurizm.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,16 @@ namespace GumuscayTurizm.Data.Concrete
             {
                 return _dbContext as GTContext;
             }
+        }
+
+        public int GetSeatCapacity(int tripId)
+        {
+            return context
+            .Trips
+            .Where(t => t.TripId == tripId)
+            .Select(t => t.Bus.SeatingCapacity)
+            .FirstOrDefault();
+               
         }
 
         public Task<List<Trip>> GetTripById(int id)

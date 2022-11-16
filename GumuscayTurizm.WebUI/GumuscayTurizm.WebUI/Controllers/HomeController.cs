@@ -51,8 +51,16 @@ namespace GumuscayTurizm.WebUI.Controllers
 
         }
        
-        public async Task<IActionResult> BuyTicket()
+        public async Task<IActionResult> BuyTicket(int tripId)
         {
+            if (ModelState.IsValid)
+            {
+                BuyTicketModel buyTicketModel = new BuyTicketModel()
+                {
+                    SeatCapacity = _tripService.GetSeatCapacity(tripId)
+                };
+                return View(buyTicketModel);
+            }
             return View();
         }
         

@@ -1,9 +1,55 @@
 ﻿@model BuyTicketModel
-
+<form asp-controller="Home" asp-action="BuyTicket">
 <div class="col-md-6">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            ENVER
+    <div class="card">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="row mb-2 mt-2">
+                    <div class="col-md-4">
+                        <label asp-for="PassengerFirstName">First Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="PassengerFirstName" />
+                    </div>
+
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <label asp-for="PassengerLastName">Last Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="PassengerLastName" />
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <label asp-for="PassengerIdentificationNumber">Identification Number</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="PassengerIdentificationNumber" />
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4">
+                        <label asp-for="Email">Email</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="Email" />
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <button class="btn btn-dark" type="submit">BİLET AL</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>
+</form>
+
+
