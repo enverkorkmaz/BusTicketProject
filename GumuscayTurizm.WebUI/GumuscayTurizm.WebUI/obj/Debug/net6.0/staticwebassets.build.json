@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9CpjMEffuE5dppj+GlC/xPizwLix8bJmvcBNOeiitkQ=",
+  "Hash": "f86v3+6VB2pMMSRj2w7mFLqt55Rs8LBFZZ8w14y6WAk=",
   "Source": "GumuscayTurizm.WebUI",
   "BasePath": "_content/GumuscayTurizm.WebUI",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\wwwroot\\images\\bizimotobus.PNG",
+      "SourceId": "GumuscayTurizm.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\wwwroot\\",
+      "BasePath": "_content/GumuscayTurizm.WebUI",
+      "RelativePath": "images/bizimotobus.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bizimotobus.PNG"
     },
     {
       "Identity": "C:\\Users\\ÖĞLE\\Desktop\\enverproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\wwwroot\\js\\site.js",

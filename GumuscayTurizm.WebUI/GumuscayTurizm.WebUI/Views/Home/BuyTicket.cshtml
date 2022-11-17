@@ -1,55 +1,81 @@
 ﻿@model BuyTicketModel
 <form asp-controller="Home" asp-action="BuyTicket">
-<div class="col-md-6">
-    <div class="card">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="row mb-2 mt-2">
-                    <div class="col-md-4">
-                        <label asp-for="PassengerFirstName">First Name</label>
-                    </div>
-                    <div class="col-md-8">
-                        <input style="width:20rem" type="text" asp-for="PassengerFirstName" />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="row mb-2 mt-2">
+                            <div class="col-md-4">
+                                <label asp-for="PassengerFirstName">First Name</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="width:20rem" type="text" asp-for="PassengerFirstName" />
+                            </div>
+                            <span asp-validation-for="PassengerFirstName" class="text-danger"></span>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                <label asp-for="PassengerLastName">Last Name</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="width:20rem" type="text" asp-for="PassengerLastName" />
+                            </div>
+                            <span asp-validation-for="PassengerLastName" class="text-danger"></span>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                <label asp-for="PassengerIdentificationNumber">Identification Number</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="width:20rem" type="text" asp-for="PassengerIdentificationNumber" />
+                            </div>
+                            <span asp-validation-for="PassengerIdentificationNumber" class="text-danger"></span>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4">
+                                <label asp-for="Email">Email</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input style="width:20rem" type="text" asp-for="Email" />
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-4 mt-2">
+                                <label asp-for="SeatCapacity">Seat Number</label>
+                            </div>
+                            <div class="col-md-7 ms-4 text-center">
+                                <select asp-for="SeatCapacity" class="form-select" style="width:15rem">
+                                    @for (int i = 1; i <= Model.SeatCapacity; i++)
+                                    {
+                                        <option value="@Model.SeatCapacity">@i</option>
+
+                                    }
+                                </select>
+                            </div>
+
+
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <button class="btn btn-dark" type="submit">BİLET AL</button>
+                            </div>
+
+
+                        </div>
+
                     </div>
 
                 </div>
-                <div class="row mb-2">
-                    <div class="col-md-4">
-                        <label asp-for="PassengerLastName">Last Name</label>
-                    </div>
-                    <div class="col-md-8">
-                        <input style="width:20rem" type="text" asp-for="PassengerLastName" />
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-4">
-                        <label asp-for="PassengerIdentificationNumber">Identification Number</label>
-                    </div>
-                    <div class="col-md-8">
-                        <input style="width:20rem" type="text" asp-for="PassengerIdentificationNumber" />
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-4">
-                        <label asp-for="Email">Email</label>
-                    </div>
-                    <div class="col-md-8">
-                        <input style="width:20rem" type="text" asp-for="Email" />
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-12">
-                        <button class="btn btn-dark" type="submit">BİLET AL</button>
-                    </div>
-
-
-                </div>
-
             </div>
-
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <img src="/images/bizimotobus.png" class="img-fluid" alt="...">
+            </div>
         </div>
     </div>
-</div>
 </form>
 
 

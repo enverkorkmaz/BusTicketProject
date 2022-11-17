@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,16 @@ namespace GumuscayTurizm.Business.Concrete
 {
     public class PassengerManager : IPassengerService
     {
-        public Task CreateAsync(Passenger passenger)
+        private IPassengerRepository _passengerRepository;
+
+        public PassengerManager(IPassengerRepository passengerRepository)
         {
-            throw new NotImplementedException();
+            _passengerRepository = passengerRepository;
+        }
+
+        public async Task CreateAsync(Passenger passenger)
+        {
+            await _passengerRepository.CreateAsync(passenger);
         }
 
         public void Delete(Passenger passenger)

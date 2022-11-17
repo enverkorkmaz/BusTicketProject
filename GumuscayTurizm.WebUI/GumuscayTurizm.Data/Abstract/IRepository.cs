@@ -10,7 +10,7 @@ namespace GumuscayTurizm.Data.Abstract
     {
         Task<TEntity> GetByIdAsync(int id);
         Task<List<TEntity>> GetAllAsync();
-        void Create();
+        Task CreateAsync(TEntity entity);
         void Update();
         void Delete();
 

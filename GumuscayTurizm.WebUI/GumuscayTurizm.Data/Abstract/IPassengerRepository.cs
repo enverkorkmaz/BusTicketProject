@@ -9,8 +9,8 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface IPassengerRepository : IRepository<Passenger>
     {
-        int GetPassengerById(int id);
-        Task CreateAsync(Passenger passenger);
+        
+
 
 
     }

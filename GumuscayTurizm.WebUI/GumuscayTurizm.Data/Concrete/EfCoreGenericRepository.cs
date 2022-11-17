@@ -17,9 +17,12 @@ namespace GumuscayTurizm.Data.Concrete
         }
         
 
-        public void Create()
+      
+
+        public async Task CreateAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public void Delete()
