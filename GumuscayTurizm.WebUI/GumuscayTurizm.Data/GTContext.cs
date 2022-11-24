@@ -63,7 +63,7 @@ namespace GumuscayTurizm.Data
                 .HasData(
                 new Ticket() { TicketId = 1, PassengerId = 1, BusId = 1, TripId = 1, SeatNumber = 1 }
                 );
-
+            
         }
     }
     }

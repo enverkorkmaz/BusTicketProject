@@ -1,0 +1,48 @@
+﻿@model LoginModel
+<div class="container">
+    <div class="row">
+        <div class="col-4 offset-4">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <form method="post">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="text-center mb-4">LOGIN</h1>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-3 offset-1">
+                                <label asp-for="Username" class="form-label mb-3">Username</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="Username" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-3 offset-1">
+                                <label asp-for="Password" class="form-label mb-3">Password</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="Password" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="from-group mb-3">
+                        <button type="submit" class="btn btn-success btn-sm btn-lg" style="width:10rem">Login</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+

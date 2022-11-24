@@ -277,7 +277,7 @@ namespace GumuscayTurizm.Data.Migrations
             modelBuilder.Entity("GumuscayTurizm.Entity.Trip", b =>
                 {
                     b.HasOne("GumuscayTurizm.Entity.Bus", "Bus")
-                        .WithMany()
+                        .WithMany("Trips")
                         .HasForeignKey("BusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -304,6 +304,8 @@ namespace GumuscayTurizm.Data.Migrations
             modelBuilder.Entity("GumuscayTurizm.Entity.Bus", b =>
                 {
                     b.Navigation("Tickets");
+
+                    b.Navigation("Trips");
                 });
 
             modelBuilder.Entity("GumuscayTurizm.Entity.Passenger", b =>

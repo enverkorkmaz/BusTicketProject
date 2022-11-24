@@ -9,9 +9,6 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface IPassengerRepository : IRepository<Passenger>
     {
-        
-
-
 
     }
 }

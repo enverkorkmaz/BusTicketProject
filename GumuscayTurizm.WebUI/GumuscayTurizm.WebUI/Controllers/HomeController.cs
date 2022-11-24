@@ -25,7 +25,7 @@ namespace GumuscayTurizm.WebUI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var result  = await _cityService.GetAllAsync();
+            var result = await _cityService.GetAllAsync();
             HomePageModel homePageModel = new HomePageModel()
             {
                 Cities = result
@@ -47,11 +47,11 @@ namespace GumuscayTurizm.WebUI.Controllers
                 Time = t.Time
 
             }).ToList();
-           
+
             return View(tripsModel);
 
         }
-       
+
         public async Task<IActionResult> BuyTicket(int tripId)
         {
             if (ModelState.IsValid)
@@ -75,10 +75,25 @@ namespace GumuscayTurizm.WebUI.Controllers
                     LastName = buyTicketModel.PassengerLastName,
                     IdentificationNumber = buyTicketModel.PassengerIdentificationNumber,
                     Email = buyTicketModel.Email
+                   
                 };
+                
+
                 await _passengerService.CreateAsync(passenger);
+                //Ticket ticket = new Ticket()
+                //{
+                //    Passenger = passenger
+                    
+                //};
+                //await _ticketService.CreateAsync(ticket);
+
+
+
+                return View(buyTicketModel);
             }
-            return View(buyTicketModel);
+            return View();
+
+
         }
 
 

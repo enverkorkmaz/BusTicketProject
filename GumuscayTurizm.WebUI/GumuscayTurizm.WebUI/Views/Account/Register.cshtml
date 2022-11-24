@@ -1,0 +1,73 @@
+﻿@model RegisterModel
+<div class="container">
+    <div class="row">
+        <div class="col-4 offset-4">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <form method="post">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="text-center mb-4">KAYIT OL</h1>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-3 offset-1">
+                                <label asp-for="Name" class="form-label mb-3">Ad Soyad</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="Name" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-4 ">
+                                <label asp-for="Username" class="form-label ms-2 mb-3">Kullanıcı adı</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="Username" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-3 offset-1">
+                                <label asp-for="Email" class="form-label mb-3">Email</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="Email" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-3 offset-1">
+                                <label asp-for="Password" class="form-label mb-3">Şifre</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="Password" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-md-3 offset-1">
+                                <label asp-for="RePassword" class="form-label mb-3">YenidenŞifre</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input asp-for="RePassword" class="from-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="from-group mb-3">
+                        <button type="submit" class="btn btn-success btn-sm btn-lg" style="width:10rem">Kayıt ol</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

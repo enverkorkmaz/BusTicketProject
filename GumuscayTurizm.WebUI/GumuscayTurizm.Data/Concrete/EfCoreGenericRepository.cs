@@ -15,9 +15,6 @@ namespace GumuscayTurizm.Data.Concrete
         {
             _dbContext = dBContext;
         }
-        
-
-      
 
         public async Task CreateAsync(TEntity entity)
         {
@@ -25,7 +22,7 @@ namespace GumuscayTurizm.Data.Concrete
             await _dbContext.SaveChangesAsync();
         }
 
-        public void Delete()
+        public void Delete(TEntity entity)
         {
             throw new NotImplementedException();
         }
@@ -37,12 +34,14 @@ namespace GumuscayTurizm.Data.Concrete
                 .ToListAsync();
         }
 
-        public Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext
+                .Set<TEntity>()
+                .FindAsync(id);
         }
 
-        public void Update()
+        public void Update(TEntity entity)
         {
             throw new NotImplementedException();
         }

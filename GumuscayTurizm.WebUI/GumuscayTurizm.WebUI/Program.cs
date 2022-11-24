@@ -3,9 +3,37 @@ using GumuscayTurizm.Business.Concrete;
 using GumuscayTurizm.Data;
 using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Data.Concrete;
+using GumuscayTurizm.WebUI.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<IdentityContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+    options.Lockout.AllowedForNewUsers = true;
+
+    options.User.RequireUniqueEmail = true;
+
+    options.SignIn.RequireConfirmedEmail = false;
+});
+
+
+
+
+
+
+
 builder.Services.AddDbContext<GTContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 builder.Services.AddScoped<ICityRepository, EfCoreCityRepository>();
 builder.Services.AddScoped<ITicketRepository, EfCoreTicketRepository>();

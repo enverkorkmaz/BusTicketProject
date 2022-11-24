@@ -23,7 +23,7 @@ namespace GumuscayTurizm.Business.Concrete
             await _passengerRepository.CreateAsync(passenger);
         }
 
-        public void Delete(Passenger passenger)
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }

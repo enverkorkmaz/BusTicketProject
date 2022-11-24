@@ -13,6 +13,6 @@ namespace GumuscayTurizm.Business.Abstract
         Task<List<Passenger>> GetAllAsync();
         Task CreateAsync(Passenger passenger);
         void Update(Passenger passenger);
-        void Delete(Passenger passenger);
+        void Delete(int id);
     }
 }

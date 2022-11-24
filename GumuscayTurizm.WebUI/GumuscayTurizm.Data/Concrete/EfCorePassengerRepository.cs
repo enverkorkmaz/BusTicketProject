@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GumuscayTurizm.Data.Concrete
 {
-    public class EfCorePassengerRepository : EfCoreGenericRepository<Passenger>,IPassengerRepository
+    public class EfCorePassengerRepository : EfCoreGenericRepository<Passenger>, IPassengerRepository
     {
         public EfCorePassengerRepository(GTContext _dbContext) : base(_dbContext)
 
@@ -19,10 +19,10 @@ namespace GumuscayTurizm.Data.Concrete
         {
             get
             {
-                return context as GTContext;
+                return _dbContext as GTContext;
             }
         }
 
-        
+
     }
 }
