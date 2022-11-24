@@ -4,6 +4,7 @@ namespace GumuscayTurizm.WebUI.Models
 {
     public class TripListModel
     {
+        public int BusId { get; set; }
         public int TripId { get; set; }
         public int fromWhereId { get; set; }
         public int toWhereId { get; set; }

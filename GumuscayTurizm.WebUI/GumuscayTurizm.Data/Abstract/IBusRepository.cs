@@ -9,6 +9,6 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface IBusRepository : IRepository<Bus>
     {
-        
+        int GetById(int busId);
     }
 }

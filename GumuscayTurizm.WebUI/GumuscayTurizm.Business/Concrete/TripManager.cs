@@ -33,6 +33,11 @@ namespace GumuscayTurizm.Business.Concrete
             throw new NotImplementedException();
         }
 
+        public int GetBusId(int tripId)
+        {
+            return _tripRepository.GetBusId(tripId);
+        }
+
         public Task<Trip> GetByIdAsync(int id)
         {
             throw new NotImplementedException();

@@ -2,7 +2,6 @@
 
 <form asp-controller="Home" asp-action="BuyTicket" method="get">
 
-
 <div class="container col-md-12">
     <div class="card">
         <div class="card-body">
@@ -11,6 +10,8 @@
                     <h2>
                         @foreach (var city in Model)
                         {
+                              
+
                             @city.fromWhere.Name
                             break;
                         }
@@ -35,6 +36,7 @@
 </div>
 @foreach (var trips in Model)
 {
+     <input name="BusId" type="hidden" value="@trips.BusId" />
     <input name="TripId" type="hidden" value=@trips.TripId />
     <div class="col-md-12 mt-2">
         <div class="card">

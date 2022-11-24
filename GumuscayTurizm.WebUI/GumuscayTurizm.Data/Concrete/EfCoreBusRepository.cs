@@ -22,6 +22,10 @@ namespace GumuscayTurizm.Data.Concrete
                 return _dbContext as GTContext;
             }
         }
-        
+
+        public int GetById(int busId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

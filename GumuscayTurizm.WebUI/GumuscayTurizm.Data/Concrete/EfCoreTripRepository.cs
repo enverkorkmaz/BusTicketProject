@@ -25,6 +25,16 @@ namespace GumuscayTurizm.Data.Concrete
             }
         }
 
+        public int GetBusId(int tripId)
+        {
+            int result = context
+                .Trips
+                .Where(t=>t.TripId== tripId)
+                .Select(t=>t.BusId)
+                .FirstOrDefault();
+            return result;
+        }
+
         public int GetSeatCapacity(int tripId)
         {
             return context

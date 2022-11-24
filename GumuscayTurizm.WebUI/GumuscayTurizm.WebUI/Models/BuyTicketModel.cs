@@ -7,6 +7,7 @@ namespace GumuscayTurizm.WebUI.Models
     {
         public int PassengerId { get; set; }
         [Required(ErrorMessage = "Bu alan boş bırakılamaz.")]
+        public int TripId { get; set; }
         public string PassengerFirstName { get; set; }
         [Required(ErrorMessage = "Bu alan boş bırakılamaz.")]
         public string PassengerLastName { get; set; }
@@ -16,6 +17,7 @@ namespace GumuscayTurizm.WebUI.Models
         [Required(ErrorMessage = "Bu alan boş bırakılamaz.")]
         public string Email { get; set; }
         public Bus Bus { get; set; }
+        public int BusId { get; set; }
         public int SeatCapacity { get; set; }
         public Ticket Ticket { get; set; }
         public int SeatNumber { get; set; }

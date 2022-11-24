@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.Data.Abstract;
 using GumuscayTurizm.Entity;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace GumuscayTurizm.Business.Concrete
 {
     public class BusManager : IBusService
     {
+        private IBusRepository _busRepository;
+
+        public BusManager(IBusRepository busRepository)
+        {
+            _busRepository = busRepository;
+        }
+
         public Task CreateAsync(Bus bus)
         {
             throw new NotImplementedException();
@@ -25,9 +33,9 @@ namespace GumuscayTurizm.Business.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<Bus> GetByIdAsync(int id)
+        public int GetById(int busId)
         {
-            throw new NotImplementedException();
+            return _busRepository.GetById(busId);
         }
 
         public void Update(Bus bus)

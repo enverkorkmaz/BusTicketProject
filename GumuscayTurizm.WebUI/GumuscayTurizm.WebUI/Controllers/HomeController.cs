@@ -54,11 +54,15 @@ namespace GumuscayTurizm.WebUI.Controllers
 
         public async Task<IActionResult> BuyTicket(int tripId)
         {
+
             if (ModelState.IsValid)
             {
                 BuyTicketModel buyTicketModel = new BuyTicketModel()
                 {
-                    SeatCapacity = _tripService.GetSeatCapacity(tripId)
+                    SeatCapacity = _tripService.GetSeatCapacity(tripId),
+                    TripId = tripId,
+                    BusId = _tripService.GetBusId(tripId)
+                    
                 };
                 return View(buyTicketModel);
             }
@@ -80,18 +84,20 @@ namespace GumuscayTurizm.WebUI.Controllers
                 
 
                 await _passengerService.CreateAsync(passenger);
-                //Ticket ticket = new Ticket()
-                //{
-                //    Passenger = passenger
-                    
-                //};
-                //await _ticketService.CreateAsync(ticket);
 
+                Ticket ticket = new Ticket()
+                {
+                    PassengerId = passenger.PassengerId,
+                    SeatNumber = buyTicketModel.SeatNumber,
+                    TripId = buyTicketModel.TripId,
+                    BusId = buyTicketModel.BusId
 
+                };
+                await _ticketService.CreateAsync(ticket);
 
-                return View(buyTicketModel);
+                return RedirectToAction("Index", "Home");
             }
-            return View();
+            return View(buyTicketModel);
 
 
         }
