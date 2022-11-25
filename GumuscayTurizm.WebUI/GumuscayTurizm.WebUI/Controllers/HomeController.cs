@@ -95,9 +95,9 @@ namespace GumuscayTurizm.WebUI.Controllers
                 };
                 await _ticketService.CreateAsync(ticket);
 
-                return RedirectToAction("Index", "Home");
+                return View(buyTicketModel);
             }
-            return View(buyTicketModel);
+            return View();
 
 
         }

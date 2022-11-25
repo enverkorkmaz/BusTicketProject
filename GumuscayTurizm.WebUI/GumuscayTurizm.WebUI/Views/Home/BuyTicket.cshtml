@@ -1,5 +1,7 @@
 ﻿@model BuyTicketModel
 <form asp-controller="Home" asp-action="BuyTicket" method="post">
+    <input name="BusId" type="hidden" value="@Model.BusId" />
+    <input name="TripId" type="hidden" value=@Model.TripId />
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -46,7 +48,7 @@
                                 <label asp-for="SeatCapacity">Seat Number</label>
                             </div>
                             <div class="col-md-7 ms-4 text-center">
-                                <select asp-for="SeatCapacity" class="form-select" style="width:15rem">
+                                <select asp-for="SeatNumber" class="form-select" style="width:15rem">
                                     @for (int i = 1; i <= Model.SeatCapacity; i++)
                                     {
                                         <option value="@Model.SeatCapacity">@i</option>
