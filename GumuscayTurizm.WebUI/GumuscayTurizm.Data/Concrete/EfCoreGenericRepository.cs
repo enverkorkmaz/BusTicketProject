@@ -43,7 +43,8 @@ namespace GumuscayTurizm.Data.Concrete
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<TEntity>().Update(entity);
+            _dbContext.SaveChanges();
         }
     }
 }

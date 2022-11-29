@@ -30,7 +30,7 @@ namespace GumuscayTurizm.Business.Concrete
 
         public Task<List<Trip>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return _tripRepository.GetAllAsync();
         }
 
         public int GetBusId(int tripId)
@@ -40,7 +40,7 @@ namespace GumuscayTurizm.Business.Concrete
 
         public Task<Trip> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _tripRepository.GetByIdAsync(id);
         }
 
         public int GetSeatCapacity(int tripId)
@@ -55,7 +55,7 @@ namespace GumuscayTurizm.Business.Concrete
 
         public void Update(Trip trip)
         {
-            throw new NotImplementedException();
+            return _tripRepository.Update(trip);
         }
     }
 }
