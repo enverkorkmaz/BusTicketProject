@@ -4,7 +4,7 @@ using Microsoft.VisualBasic;
 
 namespace GumuscayTurizm.WebUI.Identity
 {
-    public class IdentityContext : IdentityDbContext<User>
+    public class IdentityContext : IdentityDbContext<MyUser>
     {
         public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
         {

@@ -4,9 +4,13 @@ namespace GumuscayTurizm.WebUI.Models
 {
     public class LoginModel
     {
-        [Required(ErrorMessage ="Kullanıcı adı giriniz")]
-        public string Username { get; set; }
-        [Required(ErrorMessage ="Sifre giriniz")]
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+        [Required]
+        //[DataType(DataType.Password)]
         public string Password { get; set; }
+        public string ReturnUrl { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

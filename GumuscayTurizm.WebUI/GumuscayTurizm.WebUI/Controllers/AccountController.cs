@@ -7,50 +7,66 @@ namespace GumuscayTurizm.WebUI.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<User> _userManager;
-        private readonly SignInManager<User> _signInManager;
+        private readonly UserManager<MyUser> _userManager;
+        private readonly SignInManager<MyUser> _signInManager;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AccountController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Login(LoginModel loginModel)
-        {
-            if (ModelState.IsValid)
-            {
-                //login
-            }
-            return View(loginModel);
-        }
-        public  IActionResult Register()
+        public IActionResult Register()
         {
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Register(RegisterModel registerModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                User user = new User()
+                var myUser = new MyUser()
                 {
-                    Name = registerModel.Name,
-                    Email = registerModel.Email,
-                    UserName = registerModel.Username
+                    FirstName = registerModel.FirstName,
+                    LastName = registerModel.LastName,
+                    UserName = registerModel.UserName,
+                    Email = registerModel.Email
                 };
-                var result = await _userManager.CreateAsync(user, registerModel.Password);
-                if (result.Succeeded)
-                {
-
-                }
+                await _userManager.CreateAsync(myUser, registerModel.Password);
+                
             }
             return View(registerModel);
         }
+        public IActionResult Login(string returnUrl = null)
+        {
+            return View(new LoginModel() { ReturnUrl = returnUrl });
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginModel loginModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var myUser = await _userManager.FindByEmailAsync(loginModel.Email);
+                if (myUser == null)
+                {
+                    
+                    return View(loginModel);
+                }
+                var result = await _signInManager.PasswordSignInAsync(myUser, loginModel.Password, loginModel.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    return Redirect(loginModel.ReturnUrl ?? "~/");
+                }
+                
+                return View(loginModel);
+            }
+            return View(loginModel);
+        }
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect("~/");
+        }
+
+
     }
 }

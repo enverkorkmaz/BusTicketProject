@@ -1,48 +1,47 @@
 ﻿@model LoginModel
-<div class="container">
-    <div class="row">
-        <div class="col-4 offset-4">
-        </div>
-    </div>
-</div>
+<div class="card">
+    <div class="card-body">
 
-<div class="row">
-    <div class="col-4 offset-4">
-        <form method="post">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h1 class="text-center mb-4">LOGIN</h1>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-3 offset-1">
-                                <label asp-for="Username" class="form-label mb-3">Username</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="Username" class="from-control" />
-                            </div>
+
+        <h1>Login</h1>
+        <hr />
+        <form asp-controller="Account" asp-action="Login" method="post">
+            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="Email"></label>
                         </div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-3 offset-1">
-                                <label asp-for="Password" class="form-label mb-3">Password</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="Password" class="from-control" />
-                            </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="Email" />
                         </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
-                    <div class="from-group mb-3">
-                        <button type="submit" class="btn btn-success btn-sm btn-lg" style="width:10rem">Login</button>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="Password"></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input asp-for="Password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-10 offset-2">
+                            <input type="checkbox" asp-for="RememberMe" checked />
+                            <label>Remember Me</label>
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-10 offset-2">
+                            <button class="btn btn-success" type="submit">Login</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </form>
     </div>
 </div>
-
-
-
-
-

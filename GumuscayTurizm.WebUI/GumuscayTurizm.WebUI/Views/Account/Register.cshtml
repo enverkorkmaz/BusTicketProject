@@ -1,73 +1,75 @@
 ﻿@model RegisterModel
-<div class="container">
-    <div class="row">
-        <div class="col-4 offset-4">
-        </div>
-    </div>
-</div>
+<div class="card">
+    <div class="card-body">
 
-<div class="row">
-    <div class="col-4 offset-4">
-        <form method="post">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h1 class="text-center mb-4">KAYIT OL</h1>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-3 offset-1">
-                                <label asp-for="Name" class="form-label mb-3">Ad Soyad</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="Name" class="from-control" />
-                            </div>
+
+        <h1>Register</h1>
+        <hr />
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="FirstName"></label>
                         </div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-4 ">
-                                <label asp-for="Username" class="form-label ms-2 mb-3">Kullanıcı adı</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="Username" class="from-control" />
-                            </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="FirstName" />
                         </div>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
                     </div>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-3 offset-1">
-                                <label asp-for="Email" class="form-label mb-3">Email</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="Email" class="from-control" />
-                            </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="LastName"></label>
                         </div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-3 offset-1">
-                                <label asp-for="Password" class="form-label mb-3">Şifre</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="Password" class="from-control" />
-                            </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="LastName" />
                         </div>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
                     </div>
-                    <div class="form-group mb-3">
-                        <div class="row">
-                            <div class="col-md-3 offset-1">
-                                <label asp-for="RePassword" class="form-label mb-3">YenidenŞifre</label>
-                            </div>
-                            <div class="col-md-8">
-                                <input asp-for="RePassword" class="from-control" />
-                            </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="UserName"></label>
                         </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="UserName" />
+                        </div>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
                     </div>
-                    <div class="from-group mb-3">
-                        <button type="submit" class="btn btn-success btn-sm btn-lg" style="width:10rem">Kayıt ol</button>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="Email"></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input asp-for="Email" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="Password"></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input asp-for="Password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="RePassword"></label>
+                        </div>
+                        <div class="col-md-10">
+                            <input asp-for="RePassword" />
+                        </div>
+                        <span asp-validation-for="RePassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <div class="col-md-10 offset-2">
+                            <button class="btn btn-success" type="submit">Register</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
         </form>
     </div>
 </div>

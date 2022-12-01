@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<IdentityContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 
-builder.Services.AddIdentity<User, IdentityRole>()
+builder.Services.AddIdentity<MyUser, IdentityRole>()
     .AddEntityFrameworkStores<IdentityContext>()
     .AddDefaultTokenProviders();
 
