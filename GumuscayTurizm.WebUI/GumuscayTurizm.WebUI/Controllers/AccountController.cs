@@ -7,10 +7,10 @@ namespace GumuscayTurizm.WebUI.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<MyUser> _userManager;
-        private readonly SignInManager<MyUser> _signInManager;
+        private readonly UserManager<MyIdentityUser> _userManager;
+        private readonly SignInManager<MyIdentityUser> _signInManager;
 
-        public AccountController(UserManager<MyUser> userManager, SignInManager<MyUser> signInManager)
+        public AccountController(UserManager<MyIdentityUser> userManager, SignInManager<MyIdentityUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -24,7 +24,7 @@ namespace GumuscayTurizm.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var myUser = new MyUser()
+                MyIdentityUser myUser = new MyIdentityUser()
                 {
                     FirstName = registerModel.FirstName,
                     LastName = registerModel.LastName,
@@ -32,9 +32,9 @@ namespace GumuscayTurizm.WebUI.Controllers
                     Email = registerModel.Email
                 };
                 await _userManager.CreateAsync(myUser, registerModel.Password);
-                
+                return View(registerModel);
             }
-            return View(registerModel);
+            return RedirectToAction("Login");
         }
         public IActionResult Login(string returnUrl = null)
         {

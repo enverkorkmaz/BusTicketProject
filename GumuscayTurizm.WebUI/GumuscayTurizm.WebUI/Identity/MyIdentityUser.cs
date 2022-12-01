@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 namespace GumuscayTurizm.WebUI.Identity
 {
-    public class MyUser : IdentityUser
+    public class MyIdentityUser : IdentityUser
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -13,8 +13,8 @@ namespace GumuscayTurizm.WebUI.Models
     public class RoleDetails
     {
         public IdentityRole Role { get; set; }
-        public List<MyUser> Members { get; set; }
-        public List<MyUser> NonMembers { get; set; }
+        public List<MyIdentityUser> Members { get; set; }
+        public List<MyIdentityUser> NonMembers { get; set; }
     }
 
     public class RoleEditModel

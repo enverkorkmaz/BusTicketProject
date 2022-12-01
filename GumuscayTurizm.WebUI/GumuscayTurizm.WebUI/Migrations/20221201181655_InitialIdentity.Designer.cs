@@ -3,21 +3,23 @@ using System;
 using GumuscayTurizm.WebUI.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace GumuscayTurizm.WebUI.Migrations
 {
-    [DbContext(typeof(IdentityContext))]
-    partial class IdentityContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(MyIdentityContext))]
+    [Migration("20221201181655_InitialIdentity")]
+    partial class InitialIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
 
-            modelBuilder.Entity("GumuscayTurizm.WebUI.Identity.MyUser", b =>
+            modelBuilder.Entity("GumuscayTurizm.WebUI.Identity.MyIdentityUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
@@ -226,7 +228,7 @@ namespace GumuscayTurizm.WebUI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyUser", null)
+                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -235,7 +237,7 @@ namespace GumuscayTurizm.WebUI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyUser", null)
+                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -250,7 +252,7 @@ namespace GumuscayTurizm.WebUI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyUser", null)
+                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -259,7 +261,7 @@ namespace GumuscayTurizm.WebUI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyUser", null)
+                    b.HasOne("GumuscayTurizm.WebUI.Identity.MyIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

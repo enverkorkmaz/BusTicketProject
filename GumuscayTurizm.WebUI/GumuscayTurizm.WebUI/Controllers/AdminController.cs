@@ -1,7 +1,10 @@
 ﻿using GumuscayTurizm.Business.Abstract;
 using GumuscayTurizm.Entity;
+using GumuscayTurizm.WebUI.Identity;
 using GumuscayTurizm.WebUI.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GumuscayTurizm.WebUI.Controllers
 {
@@ -12,14 +15,20 @@ namespace GumuscayTurizm.WebUI.Controllers
         private readonly IPassengerService _passengerService;
         private readonly ITicketService _ticketService;
         private readonly ITripService _tripService;
+        private readonly UserManager<MyIdentityUser> _userManager;
+        private readonly SignInManager<MyIdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AdminController(ICityService cityService, IBusService busService, IPassengerService passengerService, ITicketService ticketService, ITripService tripService)
+        public AdminController(ICityService cityService, IBusService busService, IPassengerService passengerService, ITicketService ticketService, ITripService tripService, UserManager<MyIdentityUser> userManager, SignInManager<MyIdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _cityService = cityService;
             _busService = busService;
             _passengerService = passengerService;
             _ticketService = ticketService;
             _tripService = tripService;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         public IActionResult Index()
@@ -230,5 +239,12 @@ namespace GumuscayTurizm.WebUI.Controllers
             return RedirectToAction("CityList");
         }
         #endregion
+
+        public async Task<IActionResult> UserList()
+        {
+            return View(await _userManager.Users.ToListAsync());
+        }
+        
+
     }
 }
