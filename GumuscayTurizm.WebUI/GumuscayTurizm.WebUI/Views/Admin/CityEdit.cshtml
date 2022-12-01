@@ -1,0 +1,33 @@
+﻿@model CityEditModel
+<div class="card">
+    <div class="card-body">
+        <h1>City Bus</h1>
+        <hr />
+        @*Method="post" -> kayıt yapıcagımız da kullanılır*@
+        <form asp-controller="Admin" asp-action="CityEdit" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="CityId" value=@Model.CityId />
+
+            <div class="row">
+                <div class="col-md-8">
+                    @*Buraya Product bilgileri gelecek*@
+
+
+                    <div class="form-group row mb-2">
+                        <div class="col-md-2">
+                            <label asp-for="Name">Name</label>
+                        </div>
+                        <div class="col-md-10">
+                            <input type="text" asp-for="Name" />
+                        </div>
+                        @* asp-validation-for => yazdığımız hata mesajlarını gösterir*@
+
+                    </div>
+
+                    <div class="col-md-10 offset-2">
+                        <button class="btn btn-success" type="submit">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

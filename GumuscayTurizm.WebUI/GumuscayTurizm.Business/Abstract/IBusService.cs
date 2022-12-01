@@ -10,6 +10,7 @@ namespace GumuscayTurizm.Business.Abstract
 {
     public interface IBusService
     {
+        Task<Bus> GetByIdAsync(int id);
         int GetById(int busId);
         Task<List<Bus>> GetAllAsync();
         Task CreateAsync(Bus bus);

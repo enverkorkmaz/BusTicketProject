@@ -18,19 +18,19 @@ namespace GumuscayTurizm.Business.Concrete
             _busRepository = busRepository;
         }
 
-        public Task CreateAsync(Bus bus)
+        public async Task CreateAsync(Bus bus)
         {
-            throw new NotImplementedException();
+            await _busRepository.CreateAsync(bus);
         }
 
         public void Delete(Bus bus)
         {
-            throw new NotImplementedException();
+            _busRepository.Delete(bus);
         }
 
-        public Task<List<Bus>> GetAllAsync()
+        public async Task<List<Bus>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _busRepository.GetAllAsync();
         }
 
         public int GetById(int busId)
@@ -38,9 +38,14 @@ namespace GumuscayTurizm.Business.Concrete
             return _busRepository.GetById(busId);
         }
 
+        public Task<Bus> GetByIdAsync(int id)
+        {
+            return _busRepository.GetByIdAsync(id);
+        }
+
         public void Update(Bus bus)
         {
-            throw new NotImplementedException();
+            _busRepository.Update(bus);
         }
     }
 }

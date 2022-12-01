@@ -24,7 +24,8 @@ namespace GumuscayTurizm.Data.Concrete
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public async Task<List<TEntity>> GetAllAsync()

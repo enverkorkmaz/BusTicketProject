@@ -1,4 +1,5 @@
 ﻿using GumuscayTurizm.Business.Abstract;
+using GumuscayTurizm.Entity;
 using GumuscayTurizm.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,7 @@ namespace GumuscayTurizm.WebUI.Controllers
         {
             return View();
         }
+        #region Trip
         public async Task<IActionResult> AdminTripList()
         {
             var trips = await _tripService.GetAllAsync();
@@ -70,5 +72,163 @@ namespace GumuscayTurizm.WebUI.Controllers
             return View(tripEditModel);
         }
 
+        public async Task<IActionResult> TripCreate()
+        {
+            //var trip = await _tripService.GetByIdAsync(id);
+            var cities = await _cityService.GetAllAsync();
+            TripCreateModel tripCreateModel = new TripCreateModel()
+            {
+                Cities = cities
+            };
+            return View(tripCreateModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> TripCreate(TripCreateModel tripCreateModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Trip trip = new Trip()
+                {
+                    ToWhere = tripCreateModel.ToWhere,
+                    FromWhere = tripCreateModel.FromWhere,
+                    Date = tripCreateModel.Date,
+                    Time = tripCreateModel.Time,
+                    Price = tripCreateModel.Price,
+                    ToWhereId = tripCreateModel.ToWhereId,
+                    FromWhereId = tripCreateModel.FromWhereId,
+                    BusId = tripCreateModel.BusId,
+
+                };
+
+                await _tripService.CreateAsync(trip);
+                return RedirectToAction("AdminTripList");
+            }
+            return View(tripCreateModel);
+        }
+        public async Task<IActionResult> TripDelete(int id)
+        {
+            var trip = await _tripService.GetByIdAsync(id);
+            _tripService.Delete(trip);
+            return RedirectToAction("AdminTripList");
+        }
+        #endregion
+
+        #region Bus
+        public async Task<IActionResult> BusList()
+        {
+            var buses = await _busService.GetAllAsync();
+            return View(buses);
+        }
+
+        public async Task<IActionResult> BusEdit(int id)
+        {
+            var bus = await _busService.GetByIdAsync(id);
+            BusEditModel busEditModel = new BusEditModel()
+            {
+                BusId = bus.BusId,
+                Name = bus.Name,
+                SeatingCapacity = bus.SeatingCapacity
+            };
+            return View(busEditModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> BusEdit(BusEditModel busEditModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var bus = await _busService.GetByIdAsync(busEditModel.BusId);
+                bus.Name = busEditModel.Name;
+                bus.SeatingCapacity = busEditModel.SeatingCapacity;
+                _busService.Update(bus);
+                return RedirectToAction("BusList");
+            }
+            return View(busEditModel);
+        }
+
+        public async Task<IActionResult> BusCreate()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> BusCreate(BusCreateModel busCreateModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Bus bus = new Bus()
+                {
+                    Name = busCreateModel.Name,
+                    SeatingCapacity = busCreateModel.SeatingCapacity
+                };
+
+                await _busService.CreateAsync(bus);
+                return RedirectToAction("BusList");
+            }
+            return View(busCreateModel);
+        }
+        public async Task<IActionResult> BusDelete(int id)
+        {
+            var bus = await _busService.GetByIdAsync(id);
+            _busService.Delete(bus);
+            return RedirectToAction("BusList");
+        }
+        #endregion
+
+        #region City
+        public async Task<IActionResult> CityList()
+        {
+            var cities = await _cityService.GetAllAsync();
+            return View(cities);
+        }
+
+        public async Task<IActionResult> CityEdit(int id)
+        {
+            var city = await _cityService.GetByIdAsync(id);
+            CityEditModel cityEditModel = new CityEditModel()
+            {
+                CityId = city.CityId,
+                Name = city.Name
+            };
+            return View(cityEditModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> CityEdit(CityEditModel cityEditModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var city = await _cityService.GetByIdAsync(cityEditModel.CityId);
+                city.Name = cityEditModel.Name;
+                _cityService.Update(city);
+                return RedirectToAction("CityList");
+            }
+            return View(cityEditModel);
+        }
+
+        public async Task<IActionResult> CityCreate()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CityCreate(CityCreateModel cityCreateModel)
+        {
+            if (ModelState.IsValid)
+            {
+                City city = new City()
+                {
+                    Name = cityCreateModel.Name
+                };
+
+                await _cityService.CreateAsync(city);
+                return RedirectToAction("CityList");
+            }
+            return View(cityCreateModel);
+        }
+
+        public async Task<IActionResult> CityDelete(int id)
+        {
+            var city = await _cityService.GetByIdAsync(id);
+            _cityService.Delete(city);
+            return RedirectToAction("CityList");
+        }
+        #endregion
     }
 }

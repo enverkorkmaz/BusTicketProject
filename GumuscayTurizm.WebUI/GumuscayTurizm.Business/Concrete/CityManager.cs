@@ -18,14 +18,14 @@ namespace GumuscayTurizm.Business.Concrete
             _cityRepository = cityRepository;
         }
 
-        public Task CreateAsync(City city)
+        public async Task CreateAsync(City city)
         {
-            throw new NotImplementedException();
+            await _cityRepository.CreateAsync(city);
         }
 
         public void Delete(City city)
         {
-            throw new NotImplementedException();
+            _cityRepository.Delete(city);
         }
 
         public async Task<List<City>> GetAllAsync()
@@ -35,12 +35,12 @@ namespace GumuscayTurizm.Business.Concrete
 
         public Task<City> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _cityRepository.GetByIdAsync(id);
         }
 
         public void Update(City city)
         {
-            throw new NotImplementedException();
+            _cityRepository.Update(city);
         }
     }
 }

@@ -18,14 +18,14 @@ namespace GumuscayTurizm.Business.Concrete
             _tripRepository = tripRepository;
         }
 
-        public Task CreateAsync(Trip trip)
+        public async Task CreateAsync(Trip trip)
         {
-            throw new NotImplementedException();
+            await _tripRepository.CreateAsync(trip);
         }
 
         public void Delete(Trip trip)
         {
-            throw new NotImplementedException();
+            _tripRepository.Delete(trip);
         }
 
         public Task<List<Trip>> GetAllAsync()
@@ -55,7 +55,7 @@ namespace GumuscayTurizm.Business.Concrete
 
         public void Update(Trip trip)
         {
-            return _tripRepository.Update(trip);
+             _tripRepository.Update(trip);
         }
     }
 }
