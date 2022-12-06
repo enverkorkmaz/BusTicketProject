@@ -9,6 +9,6 @@ namespace GumuscayTurizm.Data.Abstract
 {
     public interface ITicketRepository : IRepository<Ticket>
     {
-        
+        List<int> GetSelectedSeats(int tripId);   
     }
 }

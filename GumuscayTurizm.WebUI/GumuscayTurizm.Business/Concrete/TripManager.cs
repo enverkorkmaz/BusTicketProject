@@ -43,9 +43,19 @@ namespace GumuscayTurizm.Business.Concrete
             return _tripRepository.GetByIdAsync(id);
         }
 
+        public decimal GetPrice(int id)
+        {
+            return _tripRepository.GetPrice(id);
+        }
+
         public int GetSeatCapacity(int tripId)
         {
             return _tripRepository.GetSeatCapacity(tripId);
+        }
+
+        public Task<Trip> GetTripByIdAsync(int id)
+        {
+            return _tripRepository.GetTripByIdAsync(id);
         }
 
         public async Task<List<Trip>> GetTripsAsync(int fromWhereId, int toWhereId, DateTime Date)

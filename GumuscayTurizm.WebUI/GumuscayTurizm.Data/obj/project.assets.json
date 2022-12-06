@@ -1244,11 +1244,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\GumuscayTurizm.Data.csproj",
+      "projectUniqueName": "C:\\Users\\enver\\Desktop\\denemeproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\GumuscayTurizm.Data.csproj",
       "projectName": "GumuscayTurizm.Data",
-      "projectPath": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\GumuscayTurizm.Data.csproj",
+      "projectPath": "C:\\Users\\enver\\Desktop\\denemeproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\GumuscayTurizm.Data.csproj",
       "packagesPath": "C:\\Users\\enver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\obj\\",
+      "outputPath": "C:\\Users\\enver\\Desktop\\denemeproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1269,8 +1269,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj": {
-              "projectPath": "C:\\Users\\enver\\Documents\\GitHub\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj"
+            "C:\\Users\\enver\\Desktop\\denemeproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj": {
+              "projectPath": "C:\\Users\\enver\\Desktop\\denemeproje\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj"
             }
           }
         }

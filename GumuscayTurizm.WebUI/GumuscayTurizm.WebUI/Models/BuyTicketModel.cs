@@ -20,6 +20,18 @@ namespace GumuscayTurizm.WebUI.Models
         public int BusId { get; set; }
         public int SeatCapacity { get; set; }
         public Ticket Ticket { get; set; }
+        public int TicketId { get; set; }
         public int SeatNumber { get; set; }
+        public decimal Price { get; set; }
+        public string CardHolderName { get; set; }
+        public string CardNumber { get; set; }
+        public string ExpireMonth { get; set; }
+        public string ExpireYear { get; set; }
+        public string Adress { get; set; }
+        public string City { get; set; }
+        public string Cvc { get; set; }
+        public string Phone { get; set; }
+        
+
     }
 }

@@ -35,7 +35,12 @@ namespace GumuscayTurizm.Business.Concrete
 
         public Task<Ticket> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _ticketRepository.GetByIdAsync(id);
+        }
+
+        public List<int> GetSelectedSeats(int tripId)
+        {
+            return _ticketRepository.GetSelectedSeats(tripId);
         }
 
         public void Update(Ticket ticket)

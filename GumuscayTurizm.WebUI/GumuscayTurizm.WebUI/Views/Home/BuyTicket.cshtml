@@ -2,6 +2,7 @@
 <form asp-controller="Home" asp-action="BuyTicket" method="post">
     <input name="BusId" type="hidden" value="@Model.BusId" />
     <input name="TripId" type="hidden" value=@Model.TripId />
+    <imput name="SeatNumber" type="hidden" value=@Model.SeatNumber />
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -49,23 +50,16 @@
                             </div>
                             <div class="col-md-7 ms-4 text-center">
                                 <select asp-for="SeatNumber" class="form-select" style="width:15rem">
-                                    @for (int i = 1; i <= Model.SeatCapacity; i++)
+                                    @foreach (var seat in ViewBag.AvailableSeats)
                                     {
-                                        <option >@i</option>
-
+                                        <option>@seat</option>
                                     }
                                 </select>
                             </div>
 
 
                         </div>
-                        <div class="row mb-2">
-                            <div class="col-md-12">
-                                <button class="btn btn-dark" type="submit">BİLET AL</button>
-                            </div>
-
-
-                        </div>
+                        
 
                     </div>
 
@@ -78,6 +72,65 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-2 mt-2">
+                    <div class="col-md-4">
+                        <label asp-for="CardHolderName">CardHolderName</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="CardHolderName" />
+                    </div>
+                    <span asp-validation-for="CardHolderName" class="text-danger"></span>
+                </div>
+                <div class="row mb-2 mt-2">
+                    <div class="col-md-4">
+                        <label asp-for="CardNumber">Card Number</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="CardNumber" />
+                    </div>
+                    <span asp-validation-for="CardNumber" class="text-danger"></span>
+                </div>
+                <div class="row mb-2 mt-2">
+                    <div class="col-md-4">
+                        <label asp-for="ExpireMonth">exprire month</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="ExpireMonth" />
+                    </div>
+                    <span asp-validation-for="ExpireMonth" class="text-danger"></span>
+                </div>
+                <div class="row mb-2 mt-2">
+                    <div class="col-md-4">
+                        <label asp-for="ExpireYear">exprire year</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="ExpireYear" />
+                    </div>
+                    <span asp-validation-for="ExpireYear" class="text-danger"></span>
+                </div>
+                <div class="row mb-2 mt-2">
+                    <div class="col-md-4">
+                        <label asp-for="Cvc">CVC</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input style="width:20rem" type="text" asp-for="Cvc" />
+                    </div>
+                    <span asp-validation-for="Cvc" class="text-danger"></span>
+                </div>
+                <div class="row mb-2">
+                <div class="col-md-12">
+                <button class="btn btn-dark" type="submit">BİLET AL</button>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="Email" value="@Model.Email" />
 </form>
 
 

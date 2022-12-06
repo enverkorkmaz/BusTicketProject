@@ -14,6 +14,6 @@ namespace GumuscayTurizm.Business.Abstract
         Task CreateAsync(Ticket ticket);
         void Update(Ticket ticket);
         void Delete(Ticket ticket);
-
+        List<int> GetSelectedSeats(int tripId);
     }
 }

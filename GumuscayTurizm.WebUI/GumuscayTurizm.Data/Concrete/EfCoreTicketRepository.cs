@@ -22,6 +22,14 @@ namespace GumuscayTurizm.Data.Concrete
                 return _dbContext as GTContext;
             }
         }
-        
+
+        public List<int> GetSelectedSeats(int tripId)
+        {
+            var result = context
+                .Tickets.Where(t=> t.TripId == tripId)
+                .Select(t=>t.SeatNumber)
+                .ToList();
+            return result;
+        }
     }
 }

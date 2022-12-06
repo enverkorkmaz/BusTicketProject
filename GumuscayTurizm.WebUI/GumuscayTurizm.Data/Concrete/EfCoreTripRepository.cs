@@ -35,6 +35,16 @@ namespace GumuscayTurizm.Data.Concrete
             return result;
         }
 
+        public decimal GetPrice(int id)
+        {
+            var result = context
+                .Trips
+                .Where(t => t.TripId == id)
+                .Select(t => t.Price)
+                .FirstOrDefault();
+            return result;
+        }
+
         public int GetSeatCapacity(int tripId)
         {
             return context
@@ -48,6 +58,20 @@ namespace GumuscayTurizm.Data.Concrete
         public Task<List<Trip>> GetTripById(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<Trip> GetTripByIdAsync(int id)
+        {
+            return await context
+                .Trips
+                .Where(t => t.TripId == id)
+                .FirstOrDefaultAsync();
+            //return await context
+            //     .Trips
+            //     .Where(t => t.TripId == id)
+            //     .Include(t => t.FromWhere)
+            //     .Include(t => t.ToWhere)
+            //     .FirstOrDefaultAsync();
         }
 
         public async Task<List<Trip>> GetTripsAsync(int fromWhereId, int toWhereId, DateTime Date)

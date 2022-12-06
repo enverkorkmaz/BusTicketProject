@@ -18,5 +18,8 @@ namespace GumuscayTurizm.Business.Abstract
         Task<List<Trip>> GetTripsAsync(int fromWhereId,int toWhereId,DateTime Date);
         int GetSeatCapacity(int tripId);
         int GetBusId(int tripId);
+        Task<Trip> GetTripByIdAsync(int id);
+        decimal GetPrice(int id);
+
     }
 }
