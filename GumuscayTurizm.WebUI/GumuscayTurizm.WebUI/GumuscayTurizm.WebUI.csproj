@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GumuscatTurizm.Core\GumuscatTurizm.Core.csproj" />
     <ProjectReference Include="..\GumuscayTurizm.Business\GumuscayTurizm.Business.csproj" />
   </ItemGroup>
 

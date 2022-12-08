@@ -1,4 +1,5 @@
-﻿using GumuscayTurizm.WebUI.Identity;
+﻿using GumuscatTurizm.Core;
+using GumuscayTurizm.WebUI.Identity;
 using GumuscayTurizm.WebUI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +32,12 @@ namespace GumuscayTurizm.WebUI.Controllers
                     UserName = registerModel.UserName,
                     Email = registerModel.Email
                 };
-                await _userManager.CreateAsync(myUser, registerModel.Password);
+                var result = await _userManager.CreateAsync(myUser, registerModel.Password);
+                if (result.Succeeded)
+                {
+                    TempData["AlertMessage"] = Jobs.CreateMessage("Info!", "Your registration has been successfully created.", "success");
+                    return Redirect("~/");
+                }
                 return View(registerModel);
             }
             return RedirectToAction("Login");
@@ -45,19 +51,28 @@ namespace GumuscayTurizm.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var myUser = await _userManager.FindByEmailAsync(loginModel.Email);
-                if (myUser == null)
+                var myIdentityUser = await _userManager.FindByEmailAsync(loginModel.Email);
+                if (myIdentityUser == null)
                 {
-                    
+                    TempData["AlertMessage"] = Jobs.CreateMessage("ERROR!", "User Name or Password is incorrect!", "danger");
                     return View(loginModel);
                 }
-                var result = await _signInManager.PasswordSignInAsync(myUser, loginModel.Password, loginModel.RememberMe, false);
-                if (result.Succeeded)
+                else
                 {
-                    return Redirect(loginModel.ReturnUrl ?? "~/");
+                    var result = await _signInManager.PasswordSignInAsync(myIdentityUser, loginModel.Password, loginModel.RememberMe, false);
+                    if (result.Succeeded)
+                    {
+                        return Redirect(loginModel.ReturnUrl ?? "~/");
+                    }
+                    else
+                    {
+                        TempData["AlertMessage"] = Jobs.CreateMessage("ERROR!", "User Name or Password is incorrect!", "danger");
+                        return View(loginModel);
+                    }
                 }
                 
-                return View(loginModel);
+                
+                
             }
             return View(loginModel);
         }

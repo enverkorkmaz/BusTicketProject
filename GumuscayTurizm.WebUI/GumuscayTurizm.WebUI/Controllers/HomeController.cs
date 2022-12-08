@@ -1,4 +1,5 @@
-﻿using GumuscayTurizm.Business.Abstract;
+﻿using GumuscatTurizm.Core;
+using GumuscayTurizm.Business.Abstract;
 using GumuscayTurizm.Entity;
 using GumuscayTurizm.WebUI.Models;
 using Iyzipay;
@@ -68,7 +69,7 @@ namespace GumuscayTurizm.WebUI.Controllers
             {
                 seats.Remove(seat);
             }
-            if (seats.Count()==0)
+            if (seats.Count() == 0)
             {
                 ViewBag.FullBusErrorMessage = "This Bus is full";
             }
@@ -80,7 +81,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                     SeatCapacity = _tripService.GetSeatCapacity(tripId),
                     TripId = tripId,
                     BusId = _tripService.GetBusId(tripId)
-                    
+
                 };
                 return View(buyTicketModel);
             }
@@ -92,11 +93,11 @@ namespace GumuscayTurizm.WebUI.Controllers
             if (ModelState.IsValid)
             {
                 buyTicketModel.Price = _tripService.GetPrice(buyTicketModel.TripId);
-            
-            Options options = new Options();
-            options.ApiKey = "sandbox-rJsPj6cwG5dIvQsoiHcswM3VUoi1cHry";
-            options.SecretKey = "sandbox-oabdYTuookbU0zysfQcCZRu7sqfFu9Wz";
-            options.BaseUrl = "https://sandbox-api.iyzipay.com";
+
+                Options options = new Options();
+                options.ApiKey = "sandbox-rJsPj6cwG5dIvQsoiHcswM3VUoi1cHry";
+                options.SecretKey = "sandbox-oabdYTuookbU0zysfQcCZRu7sqfFu9Wz";
+                options.BaseUrl = "https://sandbox-api.iyzipay.com";
 
                 CreatePaymentRequest request = new CreatePaymentRequest();
                 request.Locale = Locale.TR.ToString();
@@ -163,34 +164,35 @@ namespace GumuscayTurizm.WebUI.Controllers
 
 
                 Payment payment = Payment.Create(request, options);
-                
+
 
                 if (payment.Status == "success")
-            {
-                Passenger passenger = new Passenger()
                 {
-                    FirstName = buyTicketModel.PassengerFirstName,
-                    LastName = buyTicketModel.PassengerLastName,
-                    IdentificationNumber = buyTicketModel.PassengerIdentificationNumber,
-                    Email = buyTicketModel.Email
-                   
-                };
-                
+                    Passenger passenger = new Passenger()
+                    {
+                        FirstName = buyTicketModel.PassengerFirstName,
+                        LastName = buyTicketModel.PassengerLastName,
+                        IdentificationNumber = buyTicketModel.PassengerIdentificationNumber,
+                        Email = buyTicketModel.Email
 
-                await _passengerService.CreateAsync(passenger);
+                    };
 
-                Ticket ticket = new Ticket()
-                {
-                    PassengerId = passenger.PassengerId,
-                    SeatNumber = buyTicketModel.SeatNumber,
-                    TripId = buyTicketModel.TripId,
-                    BusId = buyTicketModel.BusId
 
-                };
-                await _ticketService.CreateAsync(ticket);
+                    await _passengerService.CreateAsync(passenger);
 
-                return RedirectToAction("TicketInfo");
-            }
+                    Ticket ticket = new Ticket()
+                    {
+                        PassengerId = passenger.PassengerId,
+                        SeatNumber = buyTicketModel.SeatNumber,
+                        TripId = buyTicketModel.TripId,
+                        BusId = buyTicketModel.BusId
+
+                    };
+                    await _ticketService.CreateAsync(ticket);
+                    TempData["AlertMessage"] = Jobs.CreateMessage("Success!", "Your payment has been successfully received!", "success");
+                    return RedirectToAction("TicketInfo",buyTicketModel);
+                }
+                TempData["AlertMessage"] = Jobs.CreateMessage("Unsuccessful!", payment.ErrorMessage, "danger");
             }
             var result = _tripService.GetSeatCapacity(tripId);
             List<int> seats = new List<int>();
@@ -208,16 +210,32 @@ namespace GumuscayTurizm.WebUI.Controllers
                 ViewBag.FullBusErrorMessage = "This Bus is full";
             }
             ViewBag.AvailableSeats = seats;
-            return View(buyTicketModel);
+
+            return View("BuyTicket",buyTicketModel);
 
 
         }
-        public async Task<IActionResult> TicketInfo(BuyTicketModel buyTicketModel)
+        public async Task<IActionResult> TicketInfo(TicketInfoModel ticketInfoModel)
         {
+            var trip = await _tripService.GetTripByIdAsync(ticketInfoModel.TripId);
+            TicketInfoModel ticketDetails = new TicketInfoModel()
+            {
+                PassengerFirstName = ticketInfoModel.PassengerFirstName,
+                PassengerLastName = ticketInfoModel.PassengerLastName,
+                Email = ticketInfoModel.Email,
+                PhoneNumber = ticketInfoModel.PhoneNumber,
+                SeatNumber = ticketInfoModel.SeatNumber,
+                Date = trip.Date,
+                Time = trip.Time,
+                FromWhereId = ticketInfoModel.FromWhereId,
+                ToWhereId = ticketInfoModel.ToWhereId,
+                FromWhere = trip.FromWhere,
+                ToWhere = trip.ToWhere
 
-            return View();
+            };
+            return View(ticketDetails);
         }
-       
+
 
     }
 }

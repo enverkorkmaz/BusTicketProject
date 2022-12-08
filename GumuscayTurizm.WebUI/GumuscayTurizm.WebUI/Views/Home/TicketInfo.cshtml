@@ -1,7 +1,117 @@
-﻿@model BuyTicketModel
+﻿@model TicketInfoModel
+<div class="display-6 text-dark ms-2 text-center">
+    Ticket
+</div>
+<hr>
+<div class="card" style="background-color:#73d71e">
+    <div class="card-title">
 
-<div class="card">
-    <div class="card-body">
+
+        <div class="row justify-content-between ">
+            @*bilet basliği*@
+            <div class="col-md-7 ">
+                <h3 class="text-white ps-2 pt-2">Ticket Information</h3>
+            </div>
+            <div class="col-md-5 text-end pe-5">
+                <img src="/images/bu.png" height="50" />
+            </div>
+        </div>
 
     </div>
-</div>
+    <div class="card-body p-1" style="background-color:#fff">
+        <div class="row justify-content-around m1">
+            <div class="col-md-5">
+                @*yolcu bilgi*@
+                <div class="row fw-bold text-center">Passenger Information</div>
+
+                <div class="row">
+                    <div class="col-md-4 p-0 fw-bold ">
+                        <label>First Name</label>
+                    </div>
+                    <div class="col-md-5 p-0 ">
+                        <label> @Model.PassengerFirstName</label>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-4 p-0 fw-bold ">
+                        <label>Last Name</label>
+
+                    </div>
+                    <div class="col-md-5 p-0 ">
+                        <label> @Model.PassengerLastName</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 p-0 fw-bold ">
+                        <label>Email</label>
+
+                    </div>
+                    <div class="col-md-5  p-0 ">
+                        <label>@Model.Email</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 p-0 fw-bold ">
+                        <label>Phone Number</label>
+
+                    </div>
+                    <div class="col-md-5 p-0">
+                        <label>@Model.PhoneNumber</label>
+
+                    </div>
+                </div>
+            </div>
+
+
+            @*bilet bilgi*@
+            <div class="col-md-5">
+                @*yolcu bilgi*@
+                <div class="row fw-bold text-center">Trip Information</div>
+                <div class="row">
+                    <div class="col-md-3 p-0 fw-bold ">
+                        <label>From</label>
+                    </div>
+                    <div class="col-md-3 p-0 ">
+                        <label>@Model.FromWhere.Name</label>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-3 p-0 fw-bold ">
+                        <label>To</label>
+                    </div>
+                    <div class="col-md-3 p-0 ">
+                        <label> @Model.ToWhere.Name</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 p-0 fw-bold ">
+                        <label>Date</label>
+                    </div>
+                    <div class="col-md-3  p-0 ">
+                        <label> @Model.Date.ToString("d")</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 p-0 fw-bold ">
+                        <label>Time</label>
+                    </div>
+                    <div class="col-md-3 p-0">
+                        <label> @Model.Time</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 p-0 fw-bold ">
+                        <label>Seat Number</label>
+                    </div>
+                    <div class="col-md-3 p-0">
+                        <label>  @Model.SeatNumber</label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+

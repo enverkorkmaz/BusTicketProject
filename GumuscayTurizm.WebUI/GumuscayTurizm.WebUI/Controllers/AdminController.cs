@@ -1,4 +1,5 @@
-﻿using GumuscayTurizm.Business.Abstract;
+﻿using GumuscatTurizm.Core;
+using GumuscayTurizm.Business.Abstract;
 using GumuscayTurizm.Entity;
 using GumuscayTurizm.WebUI.Identity;
 using GumuscayTurizm.WebUI.Models;
@@ -67,15 +68,15 @@ namespace GumuscayTurizm.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> TripEdit(TripEditModel tripEditModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var trip = await _tripService.GetByIdAsync(tripEditModel.TripId);
-                trip.ToWhere= tripEditModel.ToWhere;
-                trip.FromWhere= tripEditModel.FromWhere;
+                trip.ToWhere = tripEditModel.ToWhere;
+                trip.FromWhere = tripEditModel.FromWhere;
                 trip.Date = tripEditModel.Date;
                 trip.Time = tripEditModel.Time;
                 trip.Price = tripEditModel.Price;
-                trip.ToWhereId= tripEditModel.ToWhereId;
+                trip.ToWhereId = tripEditModel.ToWhereId;
                 trip.FromWhereId = tripEditModel.FromWhereId;
                 trip.BusId = tripEditModel.BusId;
                 _tripService.Update(trip);
@@ -271,6 +272,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                 {
                     selectedRoles = selectedRoles ?? new string[] { };
                     await _userManager.AddToRolesAsync(user, selectedRoles);
+                    TempData["AlertMessage"] = Jobs.CreateMessage("Successful!", "User created successfully!", "success");
                     return RedirectToAction("UserList");
                 }
                 foreach (var error in result.Errors)
@@ -318,6 +320,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                         userModel.SelectedRoles = userModel.SelectedRoles ?? new string[] { };
                         await _userManager.AddToRolesAsync(user, userModel.SelectedRoles.Except(userRoles).ToArray<string>());
                         await _userManager.RemoveFromRolesAsync(user, userRoles.Except(userModel.SelectedRoles).ToArray<string>());
+                        TempData["AlertMessage"] = Jobs.CreateMessage("Successful!", "The registration has been successfully edited.", "success");
                         return RedirectToAction("UserList");
 
                     }
@@ -328,12 +331,12 @@ namespace GumuscayTurizm.WebUI.Controllers
                     ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
                     return View(userModel);
                 }
-    
+                TempData["AlertMessage"] = Jobs.CreateMessage("Error!", "No such user found!", "danger");
             }
             ViewBag.Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
             return View(userModel);
         }
-        
+
         public async Task<IActionResult> ChangeUserPassword(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -348,15 +351,27 @@ namespace GumuscayTurizm.WebUI.Controllers
             var result = await _userManager.ResetPasswordAsync(user, userPassToken, changePasswordModel.NewPassword);
             if (result.Succeeded)
             {
-               
+                TempData["AlertMessage"] = Jobs.CreateMessage("Successful!", "Congratulations, the password has been changed", "success");
                 return RedirectToAction("UserList");
             }
             return View(changePasswordModel);
 
         }
+        public async Task<IActionResult> UserDelete(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null) { return NotFound(); }
+
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                TempData["AlertMessage"] = Jobs.CreateMessage("Successful!", "The deletion is complete.", "success");
+            }
+            return RedirectToAction("UserList");
+        }
 
         #endregion
-      
+
         #region Role
         public async Task<IActionResult> RoleList()
         {
@@ -375,7 +390,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                 var result = await _roleManager.CreateAsync(role);
                 if (result.Succeeded)
                 {
-
+                    TempData["AlertMessage"] = Jobs.CreateMessage("Congratulations!", "The role has been successfully created.", "success");
                     return RedirectToAction("RoleList");
                 }
             }
@@ -391,7 +406,7 @@ namespace GumuscayTurizm.WebUI.Controllers
             {
                 var list = await _userManager.IsInRoleAsync(user, role.Name) ? members : nonMembers;
                 list.Add(user);
-               
+
             }
             RoleDetails roleDetails = new RoleDetails()
             {
@@ -406,7 +421,7 @@ namespace GumuscayTurizm.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+
                 foreach (var userId in roleEditModel.IdsToAdd ?? new string[] { })
                 {
                     var user = await _userManager.FindByIdAsync(userId);
@@ -423,7 +438,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                     }
                 }
 
-                
+
                 foreach (var userId in roleEditModel.IdsToRemove ?? new string[] { })
                 {
                     var user = await _userManager.FindByIdAsync(userId);
@@ -452,20 +467,20 @@ namespace GumuscayTurizm.WebUI.Controllers
             {
                 if (await _userManager.IsInRoleAsync(user, role.Name))
                 {
-                   
+                    TempData["AlertMessage"] = Jobs.CreateMessage("Delete Failed!", "There are users in this role, you need to delete the users first.", "danger");
                     return RedirectToAction("RoleList");
                 }
             }
             var result = await _roleManager.DeleteAsync(role);
             if (result.Succeeded)
             {
-
+                TempData["AlertMessage"] = Jobs.CreateMessage("Successful!", "The deletion is complete.", "success");
             }
             return RedirectToAction("RoleList");
         }
 
         #endregion
 
-        
+
     }
 }

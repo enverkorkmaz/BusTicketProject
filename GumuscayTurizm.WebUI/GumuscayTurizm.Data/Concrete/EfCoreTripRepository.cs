@@ -65,13 +65,10 @@ namespace GumuscayTurizm.Data.Concrete
             return await context
                 .Trips
                 .Where(t => t.TripId == id)
+                .Include(t => t.FromWhere)
+                .Include(t => t.ToWhere)
                 .FirstOrDefaultAsync();
-            //return await context
-            //     .Trips
-            //     .Where(t => t.TripId == id)
-            //     .Include(t => t.FromWhere)
-            //     .Include(t => t.ToWhere)
-            //     .FirstOrDefaultAsync();
+            
         }
 
         public async Task<List<Trip>> GetTripsAsync(int fromWhereId, int toWhereId, DateTime Date)

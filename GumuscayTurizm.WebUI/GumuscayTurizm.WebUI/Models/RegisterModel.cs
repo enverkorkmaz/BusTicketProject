@@ -4,21 +4,26 @@ namespace GumuscayTurizm.WebUI.Models
 {
     public class RegisterModel
     {
-        [Required(ErrorMessage = "Bu alan zorunlu.")]
+        [Required(ErrorMessage = "First Name is required.")]
+        [StringLength(25, MinimumLength = 3, ErrorMessage = "First Name length to be 3-25!")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        [Required(ErrorMessage = "Bu alan zorunlu.")]
+        [Required(ErrorMessage = "Last Name is required.")]
+        [Display(Name = "Last Name")]
+        [StringLength(25, MinimumLength = 3, ErrorMessage = "Last Name length to be 3-25!")]
         public string LastName { get; set; }
-        [Required(ErrorMessage = "Bu alan zorunlu.")]
+        [Required(ErrorMessage = "User Name is required.")]
+        [Display(Name = "User Name")]
         public string UserName { get; set; }
-        [Required(ErrorMessage = "Bu alan zorunlu.")]
+        [Required(ErrorMessage = "Email is required.")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Bu alan zorunlu.")]
-        //[DataType(DataType.Password)]
+        [Required(ErrorMessage = "Password is required.")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
-        [Required(ErrorMessage = "Bu alan zorunlu.")]
-        //[DataType(DataType.Password)]
-        [Compare(nameof(Password), ErrorMessage = "Şifreler uyuşmuyor!")]
+        [Required(ErrorMessage = "DRePass is required.")]
+        [DataType(DataType.Password)]
+        [Compare(nameof(Password), ErrorMessage = "Password does not match!")]
         public string RePassword { get; set; }
     }
 }
