@@ -18,10 +18,12 @@ namespace GumuscayTurizm.WebUI.Models
         public int FromWhereId { get; set; }
         public int ToWhereId { get; set; }
         public List<City> Cities { get; set; }
+        public decimal Price { get; set; }
 
         public int TripId { get; set; }
         public Trip Trip { get; set; }
         public Bus Bus { get; set; }
         public int BusId { get; set; }
+        public string EstimatedTime { get; set; }
     }
 }

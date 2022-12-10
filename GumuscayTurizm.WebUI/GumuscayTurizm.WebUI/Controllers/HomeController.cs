@@ -48,7 +48,8 @@ namespace GumuscayTurizm.WebUI.Controllers
                 fromWhere = t.FromWhere,
                 Price = t.Price,
                 Date = t.Date,
-                Time = t.Time
+                Time = t.Time,
+                EstimatedTime = t.EstimatedTime
 
             }).ToList();
 
@@ -230,7 +231,9 @@ namespace GumuscayTurizm.WebUI.Controllers
                 FromWhereId = ticketInfoModel.FromWhereId,
                 ToWhereId = ticketInfoModel.ToWhereId,
                 FromWhere = trip.FromWhere,
-                ToWhere = trip.ToWhere
+                ToWhere = trip.ToWhere,
+                Price = ticketInfoModel.Price,
+                EstimatedTime = ticketInfoModel.EstimatedTime
 
             };
             return View(ticketDetails);

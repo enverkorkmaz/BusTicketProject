@@ -13,6 +13,7 @@ namespace GumuscayTurizm.WebUI.Models
         public decimal Price { get; set; }
         public City toWhere { get; set; }
         public City fromWhere { get; set; }
+        public string EstimatedTime { get; set; }
 
     }
 }

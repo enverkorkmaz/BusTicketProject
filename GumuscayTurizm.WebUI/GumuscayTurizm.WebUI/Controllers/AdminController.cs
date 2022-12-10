@@ -61,7 +61,8 @@ namespace GumuscayTurizm.WebUI.Controllers
                 BusId = trip.BusId,
                 ToWhereId = trip.ToWhereId,
                 FromWhereId = trip.FromWhereId,
-                Cities = cities
+                Cities = cities,
+                EstimatedTime = trip.EstimatedTime
             };
             return View(tripEditModel);
         }
@@ -79,6 +80,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                 trip.ToWhereId = tripEditModel.ToWhereId;
                 trip.FromWhereId = tripEditModel.FromWhereId;
                 trip.BusId = tripEditModel.BusId;
+                trip.EstimatedTime = tripEditModel.EstimatedTime;
                 _tripService.Update(trip);
                 return RedirectToAction("AdminTripList");
             }
@@ -110,6 +112,7 @@ namespace GumuscayTurizm.WebUI.Controllers
                     ToWhereId = tripCreateModel.ToWhereId,
                     FromWhereId = tripCreateModel.FromWhereId,
                     BusId = tripCreateModel.BusId,
+                    EstimatedTime = tripCreateModel.EstimatedTime
 
                 };
 

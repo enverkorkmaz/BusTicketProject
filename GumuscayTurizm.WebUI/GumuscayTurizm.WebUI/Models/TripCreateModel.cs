@@ -20,5 +20,6 @@ namespace GumuscayTurizm.WebUI.Models
 
         public Bus Bus { get; set; }
         public int BusId { get; set; }
+        public string EstimatedTime { get; set; }
     }
 }

@@ -1,28 +1,25 @@
 ﻿@model TicketInfoModel
-<div class="display-6 text-dark ms-2 text-center">
-    Ticket
+<div class="container text-center">
+    <h1 class="text-white">Thank you for choosing us!</h1>
 </div>
-<hr>
-<div class="card" style="background-color:#73d71e">
+
+<div class="card mt-5">
     <div class="card-title">
 
 
-        <div class="row justify-content-between ">
-            @*bilet basliği*@
-            <div class="col-md-7 ">
-                <h3 class="text-white ps-2 pt-2">Ticket Information</h3>
-            </div>
-            <div class="col-md-5 text-end pe-5">
-                <img src="/images/bu.png" height="50" />
+        <div class="row text-center ">
+
+            <div class="col-md-12 mt-2 ">
+                <h3 class="text-dark">Ticket Information</h3>
+                <hr />
             </div>
         </div>
 
     </div>
-    <div class="card-body p-1" style="background-color:#fff">
+    <div class="card-body">
         <div class="row justify-content-around m1">
             <div class="col-md-5">
-                @*yolcu bilgi*@
-                <div class="row fw-bold text-center">Passenger Information</div>
+
 
                 <div class="row">
                     <div class="col-md-4 p-0 fw-bold ">
@@ -54,21 +51,30 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 p-0 fw-bold ">
-                        <label>Phone Number</label>
+                        <label>Price</label>
 
                     </div>
                     <div class="col-md-5 p-0">
-                        <label>@Model.PhoneNumber</label>
+                        <label>@Model.Price</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 p-0 fw-bold ">
+                        <label>Estimated Time</label>
+
+                    </div>
+                    <div class="col-md-5 p-0">
+                        <label>@Model.EstimatedTime</label>
 
                     </div>
                 </div>
             </div>
 
 
-            @*bilet bilgi*@
+
             <div class="col-md-5">
-                @*yolcu bilgi*@
-                <div class="row fw-bold text-center">Trip Information</div>
+
                 <div class="row">
                     <div class="col-md-3 p-0 fw-bold ">
                         <label>From</label>
@@ -111,7 +117,6 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
-

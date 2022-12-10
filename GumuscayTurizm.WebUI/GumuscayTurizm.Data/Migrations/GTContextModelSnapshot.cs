@@ -192,6 +192,9 @@ namespace GumuscayTurizm.Data.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("EstimatedTime")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("FromWhereId")
                         .HasColumnType("INTEGER");
 
@@ -220,6 +223,7 @@ namespace GumuscayTurizm.Data.Migrations
                             TripId = 1,
                             BusId = 2,
                             Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EstimatedTime = "4sa45dk",
                             FromWhereId = 1,
                             Price = 150m,
                             Time = "15:00",
@@ -230,6 +234,7 @@ namespace GumuscayTurizm.Data.Migrations
                             TripId = 3,
                             BusId = 2,
                             Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EstimatedTime = "4sa45dk",
                             FromWhereId = 1,
                             Price = 150m,
                             Time = "18:00",
@@ -240,6 +245,7 @@ namespace GumuscayTurizm.Data.Migrations
                             TripId = 2,
                             BusId = 1,
                             Date = new DateTime(2022, 12, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            EstimatedTime = "1sa45dk",
                             FromWhereId = 1,
                             Price = 100m,
                             Time = "15:00",
