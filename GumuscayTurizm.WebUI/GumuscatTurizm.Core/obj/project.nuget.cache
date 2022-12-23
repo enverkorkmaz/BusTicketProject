@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WYJGYk+C1/CFrXiYDNR8/mqaA5RQFElaX6EOPaSybZK2c4ROyZ9t3ZKHQ4y9e1xX/9Wvm1qB4U+IgRz6U/wtLg==",
+  "dgSpecHash": "SBHjUtH4lMON4G0NntyEnybTmQMfptq69ySweD569SxkWUGlw5T/mSEtUBDUiadhVrWkCH0f1puoZ8fzExyTow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\GumuscatTurizm.Core.csproj",
+  "projectFilePath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\GumuscatTurizm.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enver\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\enver\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",

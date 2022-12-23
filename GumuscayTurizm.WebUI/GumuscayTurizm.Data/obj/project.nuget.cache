@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/EEQlPk/GLvlN5WnYQLuseF0LzNfCNzThvpSfdVyGcUFU2BoidAQeChSp02d2xeaE3375HMhW/4A/y9cZs8XIg==",
+  "dgSpecHash": "0I6eusxXbCymykmtKjaROuo3etjpY7ZTKUrCPsDttXSlCtPib6FKj0Lf1IfSXW8uq+Q+f1yFbwNtCeQy+Xts3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\GumuscayTurizm.Data.csproj",
+  "projectFilePath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Data\\GumuscayTurizm.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enver\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\enver\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",

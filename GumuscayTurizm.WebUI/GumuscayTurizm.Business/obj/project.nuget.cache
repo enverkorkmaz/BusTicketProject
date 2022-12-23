@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+XdfOBdl+PzEC1gjl53suf7uUQNgBjXG3Vw9C0E9Euf3JLMVLVQtsj1wTR9fM6pw8BFXj5CkkbYcZIpnyiZuTQ==",
+  "dgSpecHash": "KdctMoHbNLtCpaNbY9af4p3iuTai+F93HHOJGFIvOF0xOf4i0brkl4FslhN1kdOariWwsWQWVBPhJZfPWmXb3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Business\\GumuscayTurizm.Business.csproj",
+  "projectFilePath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Business\\GumuscayTurizm.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enver\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.10\\microsoft.data.sqlite.core.6.0.10.nupkg.sha512",
     "C:\\Users\\enver\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",

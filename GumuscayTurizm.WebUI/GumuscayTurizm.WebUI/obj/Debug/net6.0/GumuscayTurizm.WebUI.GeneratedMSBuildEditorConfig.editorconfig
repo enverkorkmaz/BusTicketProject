@@ -8,121 +8,125 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GumuscayTurizm.WebUI
 build_property.RootNamespace = GumuscayTurizm.WebUI
-build_property.ProjectDir = C:\Users\enver\Desktop\Projesonsayfa\GumuscayTurizm.WebUI\GumuscayTurizm.WebUI\
+build_property.ProjectDir = C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.WebUI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\enver\Desktop\Projesonsayfa\GumuscayTurizm.WebUI\GumuscayTurizm.WebUI
+build_property.MSBuildProjectDirectory = C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscayTurizm.WebUI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Account/Login.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Account/Register.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/AdminTripList.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/AdminTripList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5UcmlwTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/BusCreate.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/BusCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQnVzQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/BusEdit.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/BusEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQnVzRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/BusList.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/BusList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQnVzTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/ChangePassword.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/CityCreate.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/CityCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2l0eUNyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/CityEdit.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/CityEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2l0eUVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/CityList.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/CityList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2l0eUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/RoleCreate.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/RoleCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZUNyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/RoleEdit.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/RoleEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZUVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/RoleList.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/RoleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/TripCreate.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/TripCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHJpcENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/TripEdit.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/TripEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHJpcEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/UserCreate.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/UserCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlckNyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/UserEdit.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/UserEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlckVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/UserList.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Admin/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/BuyTicket.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/BuyTicket.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXlUaWNrZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/Index.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/Privacy.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/TicketInfo.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/ShowTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93VGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/TicketInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaWNrZXRJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/TripList.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Home/TripList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmlwTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Shared/Error.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/_ViewImports.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/_ViewStart.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/enver/Desktop/Projesonsayfa/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Shared/_Layout.cshtml]
+[C:/Users/enver/Documents/GitHub/Enver/BusTicketProject/GumuscayTurizm.WebUI/GumuscayTurizm.WebUI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-y0vny31bmx

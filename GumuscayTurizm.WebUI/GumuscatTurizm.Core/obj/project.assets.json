@@ -169,11 +169,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\GumuscatTurizm.Core.csproj",
+      "projectUniqueName": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\GumuscatTurizm.Core.csproj",
       "projectName": "GumuscatTurizm.Core",
-      "projectPath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\GumuscatTurizm.Core.csproj",
+      "projectPath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\GumuscatTurizm.Core.csproj",
       "packagesPath": "C:\\Users\\enver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\obj\\",
+      "outputPath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscatTurizm.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

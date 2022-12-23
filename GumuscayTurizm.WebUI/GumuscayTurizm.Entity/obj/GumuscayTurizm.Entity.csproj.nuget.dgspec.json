@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj": {}
+    "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj": {
+    "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
         "projectName": "GumuscayTurizm.Entity",
-        "projectPath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
+        "projectPath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\GumuscayTurizm.Entity.csproj",
         "packagesPath": "C:\\Users\\enver\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\obj\\",
+        "outputPath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

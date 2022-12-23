@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rS6QhUBuj1+ApSgXEZkh0lOWI6FL08f76QdLKk2mOfDz6e5Od1xlrt0re7S6M2V+Oq6iEhF6fkslarKwKE+uqA==",
+  "dgSpecHash": "fesULZx1GTS4StOFdjQxXcIZgriG668txImRerIDgk8Tcg/E9GSpyB05UyQjOKKVqJ0YVleGUN6Glbgs9DaY0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\enver\\Desktop\\Projesonsayfa\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
+  "projectFilePath": "C:\\Users\\enver\\Documents\\GitHub\\Enver\\BusTicketProject\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI\\GumuscayTurizm.WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enver\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\enver\\.nuget\\packages\\iyzipay\\2.1.46\\iyzipay.2.1.46.nupkg.sha512",

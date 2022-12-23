@@ -22,3 +22,15 @@ C:\Users\enver\Desktop\Projesonsayfa\GumuscayTurizm.WebUI\GumuscatTurizm.Core\ob
 C:\Users\enver\Desktop\Projesonsayfa\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\refint\GumuscatTurizm.Core.dll
 C:\Users\enver\Desktop\Projesonsayfa\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.pdb
 C:\Users\enver\Desktop\Projesonsayfa\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\ref\GumuscatTurizm.Core.dll
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\bin\Debug\net6.0\GumuscatTurizm.Core.deps.json
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\bin\Debug\net6.0\GumuscatTurizm.Core.dll
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\bin\Debug\net6.0\GumuscatTurizm.Core.pdb
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.csproj.AssemblyReference.cache
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.AssemblyInfoInputs.cache
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.AssemblyInfo.cs
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.csproj.CoreCompileInputs.cache
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.dll
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\refint\GumuscatTurizm.Core.dll
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\GumuscatTurizm.Core.pdb
+C:\Users\enver\Documents\GitHub\Enver\BusTicketProject\GumuscayTurizm.WebUI\GumuscatTurizm.Core\obj\Debug\net6.0\ref\GumuscatTurizm.Core.dll
